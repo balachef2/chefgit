@@ -1,0 +1,546 @@
+I, [2018-06-28T09:39:29.136992 #12846]  INFO -- default-ubuntu-1204: -----> Creating <default-ubuntu-1204>...
+I, [2018-06-28T09:39:29.264171 #12846]  INFO -- default-ubuntu-1204: Sending build context to Docker daemon  70.66kB
+I, [2018-06-28T09:39:29.307990 #12846]  INFO -- default-ubuntu-1204: Step 1/17 : FROM ubuntu:12.04
+I, [2018-06-28T09:39:29.540220 #12846]  INFO -- default-ubuntu-1204: 12.04: Pulling from library/ubuntu
+I, [2018-06-28T09:39:29.541374 #12846]  INFO -- default-ubuntu-1204: d8868e50ac4c: Pulling fs layer
+I, [2018-06-28T09:39:29.541744 #12846]  INFO -- default-ubuntu-1204: 83251ac64627: Pulling fs layer
+I, [2018-06-28T09:39:29.542794 #12846]  INFO -- default-ubuntu-1204: 589bba2f1b36: Pulling fs layer
+I, [2018-06-28T09:39:29.543059 #12846]  INFO -- default-ubuntu-1204: d62ecaceda39: Pulling fs layer
+I, [2018-06-28T09:39:29.543308 #12846]  INFO -- default-ubuntu-1204: 6d93b41cfc6b: Pulling fs layer
+I, [2018-06-28T09:39:29.543545 #12846]  INFO -- default-ubuntu-1204: d62ecaceda39: Waiting
+I, [2018-06-28T09:39:29.543778 #12846]  INFO -- default-ubuntu-1204: 6d93b41cfc6b: Waiting
+I, [2018-06-28T09:39:29.815376 #12846]  INFO -- default-ubuntu-1204: 589bba2f1b36: Verifying Checksum
+I, [2018-06-28T09:39:29.815725 #12846]  INFO -- default-ubuntu-1204: 589bba2f1b36: Download complete
+I, [2018-06-28T09:39:29.846689 #12846]  INFO -- default-ubuntu-1204: 83251ac64627: Verifying Checksum
+I, [2018-06-28T09:39:29.847025 #12846]  INFO -- default-ubuntu-1204: 83251ac64627: Download complete
+I, [2018-06-28T09:39:30.020410 #12846]  INFO -- default-ubuntu-1204: d62ecaceda39: Verifying Checksum
+I, [2018-06-28T09:39:30.020733 #12846]  INFO -- default-ubuntu-1204: d62ecaceda39: Download complete
+I, [2018-06-28T09:39:30.027677 #12846]  INFO -- default-ubuntu-1204: 6d93b41cfc6b: Verifying Checksum
+I, [2018-06-28T09:39:30.028012 #12846]  INFO -- default-ubuntu-1204: 6d93b41cfc6b: Download complete
+I, [2018-06-28T09:39:31.045776 #12846]  INFO -- default-ubuntu-1204: d8868e50ac4c: Verifying Checksum
+I, [2018-06-28T09:39:31.046148 #12846]  INFO -- default-ubuntu-1204: d8868e50ac4c: Download complete
+I, [2018-06-28T09:39:34.438456 #12846]  INFO -- default-ubuntu-1204: d8868e50ac4c: Pull complete
+I, [2018-06-28T09:39:34.485632 #12846]  INFO -- default-ubuntu-1204: 83251ac64627: Pull complete
+I, [2018-06-28T09:39:34.530563 #12846]  INFO -- default-ubuntu-1204: 589bba2f1b36: Pull complete
+I, [2018-06-28T09:39:34.574163 #12846]  INFO -- default-ubuntu-1204: d62ecaceda39: Pull complete
+I, [2018-06-28T09:39:34.617173 #12846]  INFO -- default-ubuntu-1204: 6d93b41cfc6b: Pull complete
+I, [2018-06-28T09:39:34.622694 #12846]  INFO -- default-ubuntu-1204: Digest: sha256:18305429afa14ea462f810146ba44d4363ae76e4c8dfc38288cf73aa07485005
+I, [2018-06-28T09:39:34.627001 #12846]  INFO -- default-ubuntu-1204: Status: Downloaded newer image for ubuntu:12.04
+I, [2018-06-28T09:39:34.627781 #12846]  INFO -- default-ubuntu-1204:  ---> 5b117edd0b76
+I, [2018-06-28T09:39:34.628155 #12846]  INFO -- default-ubuntu-1204: Step 2/17 : RUN dpkg-divert --local --rename --add /sbin/initctl
+I, [2018-06-28T09:39:34.645182 #12846]  INFO -- default-ubuntu-1204:  ---> Running in 3f818460cb70
+I, [2018-06-28T09:39:34.898246 #12846]  INFO -- default-ubuntu-1204: Leaving 'local diversion of /sbin/initctl to /sbin/initctl.distrib'
+I, [2018-06-28T09:39:35.125386 #12846]  INFO -- default-ubuntu-1204: Removing intermediate container 3f818460cb70
+I, [2018-06-28T09:39:35.125718 #12846]  INFO -- default-ubuntu-1204:  ---> 838498336a91
+I, [2018-06-28T09:39:35.126060 #12846]  INFO -- default-ubuntu-1204: Step 3/17 : RUN ln -sf /bin/true /sbin/initctl
+I, [2018-06-28T09:39:35.143695 #12846]  INFO -- default-ubuntu-1204:  ---> Running in 3ca3e91a4f41
+I, [2018-06-28T09:39:35.594679 #12846]  INFO -- default-ubuntu-1204: Removing intermediate container 3ca3e91a4f41
+I, [2018-06-28T09:39:35.594998 #12846]  INFO -- default-ubuntu-1204:  ---> b33b2bfa8be5
+I, [2018-06-28T09:39:35.595337 #12846]  INFO -- default-ubuntu-1204: Step 4/17 : ENV DEBIAN_FRONTEND noninteractive
+I, [2018-06-28T09:39:35.612026 #12846]  INFO -- default-ubuntu-1204:  ---> Running in 6307b536df53
+I, [2018-06-28T09:39:35.663089 #12846]  INFO -- default-ubuntu-1204: Removing intermediate container 6307b536df53
+I, [2018-06-28T09:39:35.663497 #12846]  INFO -- default-ubuntu-1204:  ---> bde31da8c5a1
+I, [2018-06-28T09:39:35.663836 #12846]  INFO -- default-ubuntu-1204: Step 5/17 : ENV container docker
+I, [2018-06-28T09:39:35.680920 #12846]  INFO -- default-ubuntu-1204:  ---> Running in f691e7076e64
+I, [2018-06-28T09:39:35.744923 #12846]  INFO -- default-ubuntu-1204: Removing intermediate container f691e7076e64
+I, [2018-06-28T09:39:35.745232 #12846]  INFO -- default-ubuntu-1204:  ---> 24b70a33339d
+I, [2018-06-28T09:39:35.745615 #12846]  INFO -- default-ubuntu-1204: Step 6/17 : RUN apt-get update
+I, [2018-06-28T09:39:35.762638 #12846]  INFO -- default-ubuntu-1204:  ---> Running in 4c8b7430cff8
+I, [2018-06-28T09:39:36.208602 #12846]  INFO -- default-ubuntu-1204: Get:1 http://archive.ubuntu.com precise Release.gpg [198 B]
+I, [2018-06-28T09:39:36.208680 #12846]  INFO -- default-ubuntu-1204: Get:2 http://archive.ubuntu.com precise-updates Release.gpg [198 B]
+I, [2018-06-28T09:39:36.209156 #12846]  INFO -- default-ubuntu-1204: Get:3 http://archive.ubuntu.com precise-security Release.gpg [181 B]
+I, [2018-06-28T09:39:36.302484 #12846]  INFO -- default-ubuntu-1204: Get:4 http://archive.ubuntu.com precise Release [49.6 kB]
+I, [2018-06-28T09:39:36.460577 #12846]  INFO -- default-ubuntu-1204: Get:5 http://archive.ubuntu.com precise-updates Release [55.4 kB]
+I, [2018-06-28T09:39:36.576214 #12846]  INFO -- default-ubuntu-1204: Get:6 http://archive.ubuntu.com precise-security Release [55.5 kB]
+I, [2018-06-28T09:39:36.669264 #12846]  INFO -- default-ubuntu-1204: Get:7 http://archive.ubuntu.com precise/main Sources [1175 kB]
+I, [2018-06-28T09:39:36.969544 #12846]  INFO -- default-ubuntu-1204: Get:8 http://archive.ubuntu.com precise/restricted Sources [5306 B]
+I, [2018-06-28T09:39:36.970194 #12846]  INFO -- default-ubuntu-1204: Get:9 http://archive.ubuntu.com precise/universe Sources [6239 kB]
+I, [2018-06-28T09:39:37.354898 #12846]  INFO -- default-ubuntu-1204: Get:10 http://archive.ubuntu.com precise/main amd64 Packages [1640 kB]
+I, [2018-06-28T09:39:37.449723 #12846]  INFO -- default-ubuntu-1204: Get:11 http://archive.ubuntu.com precise/restricted amd64 Packages [9098 B]
+I, [2018-06-28T09:39:37.450701 #12846]  INFO -- default-ubuntu-1204: Get:12 http://archive.ubuntu.com precise/universe amd64 Packages [6167 kB]
+I, [2018-06-28T09:39:37.811802 #12846]  INFO -- default-ubuntu-1204: Get:13 http://archive.ubuntu.com precise/main i386 Packages [1641 kB]
+I, [2018-06-28T09:39:37.906328 #12846]  INFO -- default-ubuntu-1204: Get:14 http://archive.ubuntu.com precise/restricted i386 Packages [9108 B]
+I, [2018-06-28T09:39:37.907245 #12846]  INFO -- default-ubuntu-1204: Get:15 http://archive.ubuntu.com precise/universe i386 Packages [6180 kB]
+I, [2018-06-28T09:39:38.267056 #12846]  INFO -- default-ubuntu-1204: Get:16 http://archive.ubuntu.com precise-updates/main Sources [618 kB]
+I, [2018-06-28T09:39:38.303701 #12846]  INFO -- default-ubuntu-1204: Get:17 http://archive.ubuntu.com precise-updates/restricted Sources [9232 B]
+I, [2018-06-28T09:39:38.304111 #12846]  INFO -- default-ubuntu-1204: Get:18 http://archive.ubuntu.com precise-updates/universe Sources [169 kB]
+I, [2018-06-28T09:39:38.314176 #12846]  INFO -- default-ubuntu-1204: Get:19 http://archive.ubuntu.com precise-updates/main amd64 Packages [960 kB]
+I, [2018-06-28T09:39:38.368749 #12846]  INFO -- default-ubuntu-1204: Get:20 http://archive.ubuntu.com precise-updates/restricted amd64 Packages [19.6 kB]
+I, [2018-06-28T09:39:38.369678 #12846]  INFO -- default-ubuntu-1204: Get:21 http://archive.ubuntu.com precise-updates/universe amd64 Packages [372 kB]
+I, [2018-06-28T09:39:38.391717 #12846]  INFO -- default-ubuntu-1204: Get:22 http://archive.ubuntu.com precise-updates/main i386 Packages [964 kB]
+I, [2018-06-28T09:39:38.450316 #12846]  INFO -- default-ubuntu-1204: Get:23 http://archive.ubuntu.com precise-updates/restricted i386 Packages [19.5 kB]
+I, [2018-06-28T09:39:38.450739 #12846]  INFO -- default-ubuntu-1204: Get:24 http://archive.ubuntu.com precise-updates/universe i386 Packages [382 kB]
+I, [2018-06-28T09:39:38.471798 #12846]  INFO -- default-ubuntu-1204: Get:25 http://archive.ubuntu.com precise-security/main Sources [190 kB]
+I, [2018-06-28T09:39:38.483282 #12846]  INFO -- default-ubuntu-1204: Get:26 http://archive.ubuntu.com precise-security/restricted Sources [4579 B]
+I, [2018-06-28T09:39:38.483637 #12846]  INFO -- default-ubuntu-1204: Get:27 http://archive.ubuntu.com precise-security/universe Sources [68.4 kB]
+I, [2018-06-28T09:39:38.486148 #12846]  INFO -- default-ubuntu-1204: Get:28 http://archive.ubuntu.com precise-security/main amd64 Packages [481 kB]
+I, [2018-06-28T09:39:38.546698 #12846]  INFO -- default-ubuntu-1204: Get:29 http://archive.ubuntu.com precise-security/restricted amd64 Packages [13.8 kB]
+I, [2018-06-28T09:39:38.547091 #12846]  INFO -- default-ubuntu-1204: Get:30 http://archive.ubuntu.com precise-security/universe amd64 Packages [187 kB]
+I, [2018-06-28T09:39:38.555107 #12846]  INFO -- default-ubuntu-1204: Get:31 http://archive.ubuntu.com precise-security/main i386 Packages [483 kB]
+I, [2018-06-28T09:39:38.577559 #12846]  INFO -- default-ubuntu-1204: Get:32 http://archive.ubuntu.com precise-security/restricted i386 Packages [13.8 kB]
+I, [2018-06-28T09:39:38.578532 #12846]  INFO -- default-ubuntu-1204: Get:33 http://archive.ubuntu.com precise-security/universe i386 Packages [197 kB]
+I, [2018-06-28T09:39:40.247433 #12846]  INFO -- default-ubuntu-1204: Fetched 28.4 MB in 4s (6721 kB/s)
+I, [2018-06-28T09:39:41.970465 #12846]  INFO -- default-ubuntu-1204: Reading package lists...
+I, [2018-06-28T09:39:42.380980 #12846]  INFO -- default-ubuntu-1204: Removing intermediate container 4c8b7430cff8
+I, [2018-06-28T09:39:42.381315 #12846]  INFO -- default-ubuntu-1204:  ---> 68e398ec205e
+I, [2018-06-28T09:39:42.381629 #12846]  INFO -- default-ubuntu-1204: Step 7/17 : RUN apt-get install -y sudo openssh-server curl lsb-release
+I, [2018-06-28T09:39:42.398004 #12846]  INFO -- default-ubuntu-1204:  ---> Running in 05a2b1fd7d9b
+I, [2018-06-28T09:39:44.383112 #12846]  INFO -- default-ubuntu-1204: Reading package lists...
+I, [2018-06-28T09:39:44.596509 #12846]  INFO -- default-ubuntu-1204: Building dependency tree...
+I, [2018-06-28T09:39:44.597067 #12846]  INFO -- default-ubuntu-1204: Reading state information...
+I, [2018-06-28T09:39:44.734788 #12846]  INFO -- default-ubuntu-1204: The following extra packages will be installed:
+I, [2018-06-28T09:39:44.735190 #12846]  INFO -- default-ubuntu-1204:   ca-certificates file krb5-locales libasn1-8-heimdal libbsd0 libcurl3
+I, [2018-06-28T09:39:44.735473 #12846]  INFO -- default-ubuntu-1204:   libedit2 libexpat1 libgcrypt11 libgnutls26 libgpg-error0 libgssapi-krb5-2
+I, [2018-06-28T09:39:44.735760 #12846]  INFO -- default-ubuntu-1204:   libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+I, [2018-06-28T09:39:44.736040 #12846]  INFO -- default-ubuntu-1204:   libheimntlm0-heimdal libhx509-5-heimdal libidn11 libk5crypto3 libkeyutils1
+I, [2018-06-28T09:39:44.736311 #12846]  INFO -- default-ubuntu-1204:   libkrb5-26-heimdal libkrb5-3 libkrb5support0 libldap-2.4-2 libmagic1
+I, [2018-06-28T09:39:44.736586 #12846]  INFO -- default-ubuntu-1204:   libp11-kit0 libroken18-heimdal librtmp0 libsasl2-2 libsasl2-modules
+I, [2018-06-28T09:39:44.736914 #12846]  INFO -- default-ubuntu-1204:   libsqlite3-0 libtasn1-3 libwind0-heimdal libwrap0 libx11-6 libx11-data
+I, [2018-06-28T09:39:44.737182 #12846]  INFO -- default-ubuntu-1204:   libxau6 libxcb1 libxdmcp6 libxext6 libxmuu1 mime-support openssh-client
+I, [2018-06-28T09:39:44.737437 #12846]  INFO -- default-ubuntu-1204:   openssl python python2.7 ssh-import-id tcpd wget xauth
+I, [2018-06-28T09:39:44.738781 #12846]  INFO -- default-ubuntu-1204: Suggested packages:
+I, [2018-06-28T09:39:44.739044 #12846]  INFO -- default-ubuntu-1204:   rng-tools gnutls-bin krb5-doc krb5-user libsasl2-modules-otp
+I, [2018-06-28T09:39:44.739302 #12846]  INFO -- default-ubuntu-1204:   libsasl2-modules-ldap libsasl2-modules-sql libsasl2-modules-gssapi-mit
+I, [2018-06-28T09:39:44.739568 #12846]  INFO -- default-ubuntu-1204:   libsasl2-modules-gssapi-heimdal lsb ssh-askpass libpam-ssh keychain
+I, [2018-06-28T09:39:44.739848 #12846]  INFO -- default-ubuntu-1204:   monkeysphere openssh-blacklist openssh-blacklist-extra rssh molly-guard ufw
+I, [2018-06-28T09:39:44.740095 #12846]  INFO -- default-ubuntu-1204:   python-doc python-tk python2.7-doc binutils
+I, [2018-06-28T09:39:44.741577 #12846]  INFO -- default-ubuntu-1204: The following NEW packages will be installed:
+I, [2018-06-28T09:39:44.741838 #12846]  INFO -- default-ubuntu-1204:   ca-certificates curl file krb5-locales libasn1-8-heimdal libbsd0 libcurl3
+I, [2018-06-28T09:39:44.742091 #12846]  INFO -- default-ubuntu-1204:   libedit2 libexpat1 libgcrypt11 libgnutls26 libgpg-error0 libgssapi-krb5-2
+I, [2018-06-28T09:39:44.742384 #12846]  INFO -- default-ubuntu-1204:   libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+I, [2018-06-28T09:39:44.742692 #12846]  INFO -- default-ubuntu-1204:   libheimntlm0-heimdal libhx509-5-heimdal libidn11 libk5crypto3 libkeyutils1
+I, [2018-06-28T09:39:44.743029 #12846]  INFO -- default-ubuntu-1204:   libkrb5-26-heimdal libkrb5-3 libkrb5support0 libldap-2.4-2 libmagic1
+I, [2018-06-28T09:39:44.743278 #12846]  INFO -- default-ubuntu-1204:   libp11-kit0 libroken18-heimdal librtmp0 libsasl2-2 libsasl2-modules
+I, [2018-06-28T09:39:44.743522 #12846]  INFO -- default-ubuntu-1204:   libsqlite3-0 libtasn1-3 libwind0-heimdal libwrap0 libx11-6 libx11-data
+I, [2018-06-28T09:39:44.743776 #12846]  INFO -- default-ubuntu-1204:   libxau6 libxcb1 libxdmcp6 libxext6 libxmuu1 lsb-release mime-support
+I, [2018-06-28T09:39:44.744035 #12846]  INFO -- default-ubuntu-1204:   openssh-client openssh-server openssl python python2.7 ssh-import-id sudo
+I, [2018-06-28T09:39:44.744282 #12846]  INFO -- default-ubuntu-1204:   tcpd wget xauth
+I, [2018-06-28T09:39:45.357911 #12846]  INFO -- default-ubuntu-1204: 0 upgraded, 54 newly installed, 0 to remove and 0 not upgraded.
+I, [2018-06-28T09:39:45.357990 #12846]  INFO -- default-ubuntu-1204: Need to get 10.7 MB of archives.
+I, [2018-06-28T09:39:45.358015 #12846]  INFO -- default-ubuntu-1204: After this operation, 34.9 MB of additional disk space will be used.
+I, [2018-06-28T09:39:45.358032 #12846]  INFO -- default-ubuntu-1204: Get:1 http://archive.ubuntu.com/ubuntu/ precise-updates/main libsqlite3-0 amd64 3.7.9-2ubuntu1.2 [349 kB]
+I, [2018-06-28T09:39:45.816707 #12846]  INFO -- default-ubuntu-1204: Get:2 http://archive.ubuntu.com/ubuntu/ precise-updates/main libroken18-heimdal amd64 1.6~git20120311.dfsg.1-2ubuntu0.1 [46.0 kB]
+I, [2018-06-28T09:39:45.833350 #12846]  INFO -- default-ubuntu-1204: Get:3 http://archive.ubuntu.com/ubuntu/ precise-updates/main libasn1-8-heimdal amd64 1.6~git20120311.dfsg.1-2ubuntu0.1 [220 kB]
+I, [2018-06-28T09:39:45.891297 #12846]  INFO -- default-ubuntu-1204: Get:4 http://archive.ubuntu.com/ubuntu/ precise/main libbsd0 amd64 0.3.0-2 [31.6 kB]
+I, [2018-06-28T09:39:45.895591 #12846]  INFO -- default-ubuntu-1204: Get:5 http://archive.ubuntu.com/ubuntu/ precise/main libedit2 amd64 2.11-20080614-3ubuntu2 [70.3 kB]
+I, [2018-06-28T09:39:45.910006 #12846]  INFO -- default-ubuntu-1204: Get:6 http://archive.ubuntu.com/ubuntu/ precise/main libgpg-error0 amd64 1.10-2ubuntu1 [14.5 kB]
+I, [2018-06-28T09:39:45.913026 #12846]  INFO -- default-ubuntu-1204: Get:7 http://archive.ubuntu.com/ubuntu/ precise-updates/main libgcrypt11 amd64 1.5.0-3ubuntu0.6 [282 kB]
+I, [2018-06-28T09:39:45.953657 #12846]  INFO -- default-ubuntu-1204: Get:8 http://archive.ubuntu.com/ubuntu/ precise/main libp11-kit0 amd64 0.12-2ubuntu1 [34.3 kB]
+I, [2018-06-28T09:39:45.958594 #12846]  INFO -- default-ubuntu-1204: Get:9 http://archive.ubuntu.com/ubuntu/ precise-updates/main libtasn1-3 amd64 2.10-1ubuntu1.5 [43.6 kB]
+I, [2018-06-28T09:39:45.964056 #12846]  INFO -- default-ubuntu-1204: Get:10 http://archive.ubuntu.com/ubuntu/ precise-updates/main libgnutls26 amd64 2.12.14-5ubuntu3.14 [461 kB]
+I, [2018-06-28T09:39:46.012264 #12846]  INFO -- default-ubuntu-1204: Get:11 http://archive.ubuntu.com/ubuntu/ precise-updates/main libkrb5support0 amd64 1.10+dfsg~beta1-2ubuntu0.7 [24.9 kB]
+I, [2018-06-28T09:39:46.013968 #12846]  INFO -- default-ubuntu-1204: Get:12 http://archive.ubuntu.com/ubuntu/ precise-updates/main libk5crypto3 amd64 1.10+dfsg~beta1-2ubuntu0.7 [80.1 kB]
+I, [2018-06-28T09:39:46.020238 #12846]  INFO -- default-ubuntu-1204: Get:13 http://archive.ubuntu.com/ubuntu/ precise/main libkeyutils1 amd64 1.5.2-2 [7862 B]
+I, [2018-06-28T09:39:46.021081 #12846]  INFO -- default-ubuntu-1204: Get:14 http://archive.ubuntu.com/ubuntu/ precise-updates/main libkrb5-3 amd64 1.10+dfsg~beta1-2ubuntu0.7 [355 kB]
+I, [2018-06-28T09:39:46.046233 #12846]  INFO -- default-ubuntu-1204: Get:15 http://archive.ubuntu.com/ubuntu/ precise-updates/main libgssapi-krb5-2 amd64 1.10+dfsg~beta1-2ubuntu0.7 [119 kB]
+I, [2018-06-28T09:39:46.095173 #12846]  INFO -- default-ubuntu-1204: Get:16 http://archive.ubuntu.com/ubuntu/ precise-updates/main libhcrypto4-heimdal amd64 1.6~git20120311.dfsg.1-2ubuntu0.1 [103 kB]
+I, [2018-06-28T09:39:46.098681 #12846]  INFO -- default-ubuntu-1204: Get:17 http://archive.ubuntu.com/ubuntu/ precise-updates/main libheimbase1-heimdal amd64 1.6~git20120311.dfsg.1-2ubuntu0.1 [33.1 kB]
+I, [2018-06-28T09:39:46.100316 #12846]  INFO -- default-ubuntu-1204: Get:18 http://archive.ubuntu.com/ubuntu/ precise-updates/main libwind0-heimdal amd64 1.6~git20120311.dfsg.1-2ubuntu0.1 [77.8 kB]
+I, [2018-06-28T09:39:46.103329 #12846]  INFO -- default-ubuntu-1204: Get:19 http://archive.ubuntu.com/ubuntu/ precise-updates/main libhx509-5-heimdal amd64 1.6~git20120311.dfsg.1-2ubuntu0.1 [125 kB]
+I, [2018-06-28T09:39:46.187608 #12846]  INFO -- default-ubuntu-1204: Get:20 http://archive.ubuntu.com/ubuntu/ precise-updates/main libkrb5-26-heimdal amd64 1.6~git20120311.dfsg.1-2ubuntu0.1 [234 kB]
+I, [2018-06-28T09:39:46.193999 #12846]  INFO -- default-ubuntu-1204: Get:21 http://archive.ubuntu.com/ubuntu/ precise-updates/main libheimntlm0-heimdal amd64 1.6~git20120311.dfsg.1-2ubuntu0.1 [16.0 kB]
+I, [2018-06-28T09:39:46.194907 #12846]  INFO -- default-ubuntu-1204: Get:22 http://archive.ubuntu.com/ubuntu/ precise-updates/main libgssapi3-heimdal amd64 1.6~git20120311.dfsg.1-2ubuntu0.1 [108 kB]
+I, [2018-06-28T09:39:46.197479 #12846]  INFO -- default-ubuntu-1204: Get:23 http://archive.ubuntu.com/ubuntu/ precise-updates/main libidn11 amd64 1.23-2ubuntu0.1 [112 kB]
+I, [2018-06-28T09:39:46.201390 #12846]  INFO -- default-ubuntu-1204: Get:24 http://archive.ubuntu.com/ubuntu/ precise-updates/main libsasl2-2 amd64 2.1.25.dfsg1-3ubuntu0.1 [69.1 kB]
+I, [2018-06-28T09:39:46.203312 #12846]  INFO -- default-ubuntu-1204: Get:25 http://archive.ubuntu.com/ubuntu/ precise-updates/main libldap-2.4-2 amd64 2.4.28-1.1ubuntu4.6 [185 kB]
+I, [2018-06-28T09:39:46.280417 #12846]  INFO -- default-ubuntu-1204: Get:26 http://archive.ubuntu.com/ubuntu/ precise/main librtmp0 amd64 2.4~20110711.gitc28f1bab-1 [57.1 kB]
+I, [2018-06-28T09:39:46.282280 #12846]  INFO -- default-ubuntu-1204: Get:27 http://archive.ubuntu.com/ubuntu/ precise/main libxau6 amd64 1:1.0.6-4 [8392 B]
+I, [2018-06-28T09:39:46.283031 #12846]  INFO -- default-ubuntu-1204: Get:28 http://archive.ubuntu.com/ubuntu/ precise/main libxdmcp6 amd64 1:1.1.0-4 [12.7 kB]
+I, [2018-06-28T09:39:46.283791 #12846]  INFO -- default-ubuntu-1204: Get:29 http://archive.ubuntu.com/ubuntu/ precise-updates/main libxcb1 amd64 1.8.1-1ubuntu0.2 [44.8 kB]
+I, [2018-06-28T09:39:46.373003 #12846]  INFO -- default-ubuntu-1204: Get:30 http://archive.ubuntu.com/ubuntu/ precise-updates/main libx11-data all 2:1.4.99.1-0ubuntu2.3 [171 kB]
+I, [2018-06-28T09:39:46.377276 #12846]  INFO -- default-ubuntu-1204: Get:31 http://archive.ubuntu.com/ubuntu/ precise-updates/main libx11-6 amd64 2:1.4.99.1-0ubuntu2.3 [764 kB]
+I, [2018-06-28T09:39:46.400444 #12846]  INFO -- default-ubuntu-1204: Get:32 http://archive.ubuntu.com/ubuntu/ precise-updates/main libxext6 amd64 2:1.3.0-3ubuntu0.2 [33.8 kB]
+I, [2018-06-28T09:39:46.401742 #12846]  INFO -- default-ubuntu-1204: Get:33 http://archive.ubuntu.com/ubuntu/ precise/main libxmuu1 amd64 2:1.1.0-3 [11.0 kB]
+I, [2018-06-28T09:39:46.402717 #12846]  INFO -- default-ubuntu-1204: Get:34 http://archive.ubuntu.com/ubuntu/ precise-updates/main openssl amd64 1.0.1-4ubuntu5.39 [524 kB]
+I, [2018-06-28T09:39:46.417458 #12846]  INFO -- default-ubuntu-1204: Get:35 http://archive.ubuntu.com/ubuntu/ precise-updates/main ca-certificates all 20160104ubuntu0.12.04.1 [208 kB]
+I, [2018-06-28T09:39:46.469066 #12846]  INFO -- default-ubuntu-1204: Get:36 http://archive.ubuntu.com/ubuntu/ precise-updates/main libcurl3 amd64 7.22.0-3ubuntu4.17 [237 kB]
+I, [2018-06-28T09:39:46.476074 #12846]  INFO -- default-ubuntu-1204: Get:37 http://archive.ubuntu.com/ubuntu/ precise-updates/main libexpat1 amd64 2.0.1-7.2ubuntu1.4 [131 kB]
+I, [2018-06-28T09:39:46.479774 #12846]  INFO -- default-ubuntu-1204: Get:38 http://archive.ubuntu.com/ubuntu/ precise/main libwrap0 amd64 7.6.q-21 [49.9 kB]
+I, [2018-06-28T09:39:46.481426 #12846]  INFO -- default-ubuntu-1204: Get:39 http://archive.ubuntu.com/ubuntu/ precise-updates/main libmagic1 amd64 5.09-2ubuntu0.6 [218 kB]
+I, [2018-06-28T09:39:46.558351 #12846]  INFO -- default-ubuntu-1204: Get:40 http://archive.ubuntu.com/ubuntu/ precise-updates/main file amd64 5.09-2ubuntu0.6 [20.0 kB]
+I, [2018-06-28T09:39:46.559555 #12846]  INFO -- default-ubuntu-1204: Get:41 http://archive.ubuntu.com/ubuntu/ precise-updates/main mime-support all 3.51-1ubuntu1.1 [30.4 kB]
+I, [2018-06-28T09:39:46.560736 #12846]  INFO -- default-ubuntu-1204: Get:42 http://archive.ubuntu.com/ubuntu/ precise-updates/main python2.7 amd64 2.7.3-0ubuntu3.9 [2678 kB]
+I, [2018-06-28T09:39:46.777950 #12846]  INFO -- default-ubuntu-1204: Get:43 http://archive.ubuntu.com/ubuntu/ precise-updates/main python amd64 2.7.3-0ubuntu2.2 [168 kB]
+I, [2018-06-28T09:39:46.781759 #12846]  INFO -- default-ubuntu-1204: Get:44 http://archive.ubuntu.com/ubuntu/ precise-updates/main lsb-release all 4.0-0ubuntu20.3 [11.0 kB]
+I, [2018-06-28T09:39:46.782594 #12846]  INFO -- default-ubuntu-1204: Get:45 http://archive.ubuntu.com/ubuntu/ precise-updates/main sudo amd64 1.8.3p1-1ubuntu3.7 [288 kB]
+I, [2018-06-28T09:39:46.874526 #12846]  INFO -- default-ubuntu-1204: Get:46 http://archive.ubuntu.com/ubuntu/ precise-updates/main krb5-locales all 1.10+dfsg~beta1-2ubuntu0.7 [10.3 kB]
+I, [2018-06-28T09:39:46.875408 #12846]  INFO -- default-ubuntu-1204: Get:47 http://archive.ubuntu.com/ubuntu/ precise-updates/main libsasl2-modules amd64 2.1.25.dfsg1-3ubuntu0.1 [63.2 kB]
+I, [2018-06-28T09:39:46.876977 #12846]  INFO -- default-ubuntu-1204: Get:48 http://archive.ubuntu.com/ubuntu/ precise-updates/main openssh-client amd64 1:5.9p1-5ubuntu1.10 [943 kB]
+I, [2018-06-28T09:39:46.975559 #12846]  INFO -- default-ubuntu-1204: Get:49 http://archive.ubuntu.com/ubuntu/ precise-updates/main wget amd64 1.13.4-2ubuntu1.4 [279 kB]
+I, [2018-06-28T09:39:46.981516 #12846]  INFO -- default-ubuntu-1204: Get:50 http://archive.ubuntu.com/ubuntu/ precise/main xauth amd64 1:1.0.6-1 [26.2 kB]
+I, [2018-06-28T09:39:46.982605 #12846]  INFO -- default-ubuntu-1204: Get:51 http://archive.ubuntu.com/ubuntu/ precise-updates/main curl amd64 7.22.0-3ubuntu4.17 [138 kB]
+I, [2018-06-28T09:39:46.985741 #12846]  INFO -- default-ubuntu-1204: Get:52 http://archive.ubuntu.com/ubuntu/ precise-updates/main openssh-server amd64 1:5.9p1-5ubuntu1.10 [339 kB]
+I, [2018-06-28T09:39:47.005461 #12846]  INFO -- default-ubuntu-1204: Get:53 http://archive.ubuntu.com/ubuntu/ precise/main tcpd amd64 7.6.q-21 [29.4 kB]
+I, [2018-06-28T09:39:47.006556 #12846]  INFO -- default-ubuntu-1204: Get:54 http://archive.ubuntu.com/ubuntu/ precise/main ssh-import-id all 2.10-0ubuntu1 [6598 B]
+I, [2018-06-28T09:39:47.077002 #12846]  INFO -- default-ubuntu-1204: [91mdebconf: delaying package configuration, since apt-utils is not installed
+I, [2018-06-28T09:39:47.089225 #12846]  INFO -- default-ubuntu-1204: [0mFetched 10.7 MB in 1s (5826 kB/s)
+I, [2018-06-28T09:39:47.112058 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libsqlite3-0.
+I, [2018-06-28T09:39:47.115690 #12846]  INFO -- default-ubuntu-1204: (Reading database ... 7590 files and directories currently installed.)
+I, [2018-06-28T09:39:47.116241 #12846]  INFO -- default-ubuntu-1204: Unpacking libsqlite3-0 (from .../libsqlite3-0_3.7.9-2ubuntu1.2_amd64.deb) ...
+I, [2018-06-28T09:39:47.155446 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libroken18-heimdal.
+I, [2018-06-28T09:39:47.156579 #12846]  INFO -- default-ubuntu-1204: Unpacking libroken18-heimdal (from .../libroken18-heimdal_1.6~git20120311.dfsg.1-2ubuntu0.1_amd64.deb) ...
+I, [2018-06-28T09:39:47.189128 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libasn1-8-heimdal.
+I, [2018-06-28T09:39:47.190290 #12846]  INFO -- default-ubuntu-1204: Unpacking libasn1-8-heimdal (from .../libasn1-8-heimdal_1.6~git20120311.dfsg.1-2ubuntu0.1_amd64.deb) ...
+I, [2018-06-28T09:39:47.226657 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libbsd0.
+I, [2018-06-28T09:39:47.227825 #12846]  INFO -- default-ubuntu-1204: Unpacking libbsd0 (from .../libbsd0_0.3.0-2_amd64.deb) ...
+I, [2018-06-28T09:39:47.257344 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libedit2.
+I, [2018-06-28T09:39:47.258454 #12846]  INFO -- default-ubuntu-1204: Unpacking libedit2 (from .../libedit2_2.11-20080614-3ubuntu2_amd64.deb) ...
+I, [2018-06-28T09:39:47.289690 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libgpg-error0.
+I, [2018-06-28T09:39:47.290758 #12846]  INFO -- default-ubuntu-1204: Unpacking libgpg-error0 (from .../libgpg-error0_1.10-2ubuntu1_amd64.deb) ...
+I, [2018-06-28T09:39:47.320663 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libgcrypt11.
+I, [2018-06-28T09:39:47.321823 #12846]  INFO -- default-ubuntu-1204: Unpacking libgcrypt11 (from .../libgcrypt11_1.5.0-3ubuntu0.6_amd64.deb) ...
+I, [2018-06-28T09:39:47.357793 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libp11-kit0.
+I, [2018-06-28T09:39:47.358995 #12846]  INFO -- default-ubuntu-1204: Unpacking libp11-kit0 (from .../libp11-kit0_0.12-2ubuntu1_amd64.deb) ...
+I, [2018-06-28T09:39:47.389142 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libtasn1-3.
+I, [2018-06-28T09:39:47.390324 #12846]  INFO -- default-ubuntu-1204: Unpacking libtasn1-3 (from .../libtasn1-3_2.10-1ubuntu1.5_amd64.deb) ...
+I, [2018-06-28T09:39:47.421138 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libgnutls26.
+I, [2018-06-28T09:39:47.422372 #12846]  INFO -- default-ubuntu-1204: Unpacking libgnutls26 (from .../libgnutls26_2.12.14-5ubuntu3.14_amd64.deb) ...
+I, [2018-06-28T09:39:47.462745 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libkrb5support0.
+I, [2018-06-28T09:39:47.463978 #12846]  INFO -- default-ubuntu-1204: Unpacking libkrb5support0 (from .../libkrb5support0_1.10+dfsg~beta1-2ubuntu0.7_amd64.deb) ...
+I, [2018-06-28T09:39:47.495658 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libk5crypto3.
+I, [2018-06-28T09:39:47.496919 #12846]  INFO -- default-ubuntu-1204: Unpacking libk5crypto3 (from .../libk5crypto3_1.10+dfsg~beta1-2ubuntu0.7_amd64.deb) ...
+I, [2018-06-28T09:39:47.528298 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libkeyutils1.
+I, [2018-06-28T09:39:47.529459 #12846]  INFO -- default-ubuntu-1204: Unpacking libkeyutils1 (from .../libkeyutils1_1.5.2-2_amd64.deb) ...
+I, [2018-06-28T09:39:47.563071 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libkrb5-3.
+I, [2018-06-28T09:39:47.564377 #12846]  INFO -- default-ubuntu-1204: Unpacking libkrb5-3 (from .../libkrb5-3_1.10+dfsg~beta1-2ubuntu0.7_amd64.deb) ...
+I, [2018-06-28T09:39:47.604445 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libgssapi-krb5-2.
+I, [2018-06-28T09:39:47.605623 #12846]  INFO -- default-ubuntu-1204: Unpacking libgssapi-krb5-2 (from .../libgssapi-krb5-2_1.10+dfsg~beta1-2ubuntu0.7_amd64.deb) ...
+I, [2018-06-28T09:39:47.639298 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libhcrypto4-heimdal.
+I, [2018-06-28T09:39:47.640509 #12846]  INFO -- default-ubuntu-1204: Unpacking libhcrypto4-heimdal (from .../libhcrypto4-heimdal_1.6~git20120311.dfsg.1-2ubuntu0.1_amd64.deb) ...
+I, [2018-06-28T09:39:47.672706 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libheimbase1-heimdal.
+I, [2018-06-28T09:39:47.673901 #12846]  INFO -- default-ubuntu-1204: Unpacking libheimbase1-heimdal (from .../libheimbase1-heimdal_1.6~git20120311.dfsg.1-2ubuntu0.1_amd64.deb) ...
+I, [2018-06-28T09:39:47.704465 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libwind0-heimdal.
+I, [2018-06-28T09:39:47.705556 #12846]  INFO -- default-ubuntu-1204: Unpacking libwind0-heimdal (from .../libwind0-heimdal_1.6~git20120311.dfsg.1-2ubuntu0.1_amd64.deb) ...
+I, [2018-06-28T09:39:47.738325 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libhx509-5-heimdal.
+I, [2018-06-28T09:39:47.739491 #12846]  INFO -- default-ubuntu-1204: Unpacking libhx509-5-heimdal (from .../libhx509-5-heimdal_1.6~git20120311.dfsg.1-2ubuntu0.1_amd64.deb) ...
+I, [2018-06-28T09:39:47.773819 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libkrb5-26-heimdal.
+I, [2018-06-28T09:39:47.775020 #12846]  INFO -- default-ubuntu-1204: Unpacking libkrb5-26-heimdal (from .../libkrb5-26-heimdal_1.6~git20120311.dfsg.1-2ubuntu0.1_amd64.deb) ...
+I, [2018-06-28T09:39:47.811078 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libheimntlm0-heimdal.
+I, [2018-06-28T09:39:47.812247 #12846]  INFO -- default-ubuntu-1204: Unpacking libheimntlm0-heimdal (from .../libheimntlm0-heimdal_1.6~git20120311.dfsg.1-2ubuntu0.1_amd64.deb) ...
+I, [2018-06-28T09:39:47.843335 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libgssapi3-heimdal.
+I, [2018-06-28T09:39:47.844436 #12846]  INFO -- default-ubuntu-1204: Unpacking libgssapi3-heimdal (from .../libgssapi3-heimdal_1.6~git20120311.dfsg.1-2ubuntu0.1_amd64.deb) ...
+I, [2018-06-28T09:39:47.877798 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libidn11.
+I, [2018-06-28T09:39:47.879040 #12846]  INFO -- default-ubuntu-1204: Unpacking libidn11 (from .../libidn11_1.23-2ubuntu0.1_amd64.deb) ...
+I, [2018-06-28T09:39:47.909939 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libsasl2-2.
+I, [2018-06-28T09:39:47.911055 #12846]  INFO -- default-ubuntu-1204: Unpacking libsasl2-2 (from .../libsasl2-2_2.1.25.dfsg1-3ubuntu0.1_amd64.deb) ...
+I, [2018-06-28T09:39:47.942656 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libldap-2.4-2.
+I, [2018-06-28T09:39:47.943696 #12846]  INFO -- default-ubuntu-1204: Unpacking libldap-2.4-2 (from .../libldap-2.4-2_2.4.28-1.1ubuntu4.6_amd64.deb) ...
+I, [2018-06-28T09:39:47.979407 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package librtmp0.
+I, [2018-06-28T09:39:47.980519 #12846]  INFO -- default-ubuntu-1204: Unpacking librtmp0 (from .../librtmp0_2.4~20110711.gitc28f1bab-1_amd64.deb) ...
+I, [2018-06-28T09:39:48.011286 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libxau6.
+I, [2018-06-28T09:39:48.012472 #12846]  INFO -- default-ubuntu-1204: Unpacking libxau6 (from .../libxau6_1%3a1.0.6-4_amd64.deb) ...
+I, [2018-06-28T09:39:48.041038 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libxdmcp6.
+I, [2018-06-28T09:39:48.042282 #12846]  INFO -- default-ubuntu-1204: Unpacking libxdmcp6 (from .../libxdmcp6_1%3a1.1.0-4_amd64.deb) ...
+I, [2018-06-28T09:39:48.072093 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libxcb1.
+I, [2018-06-28T09:39:48.073065 #12846]  INFO -- default-ubuntu-1204: Unpacking libxcb1 (from .../libxcb1_1.8.1-1ubuntu0.2_amd64.deb) ...
+I, [2018-06-28T09:39:48.099275 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libx11-data.
+I, [2018-06-28T09:39:48.100307 #12846]  INFO -- default-ubuntu-1204: Unpacking libx11-data (from .../libx11-data_2%3a1.4.99.1-0ubuntu2.3_all.deb) ...
+I, [2018-06-28T09:39:48.161559 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libx11-6.
+I, [2018-06-28T09:39:48.162894 #12846]  INFO -- default-ubuntu-1204: Unpacking libx11-6 (from .../libx11-6_2%3a1.4.99.1-0ubuntu2.3_amd64.deb) ...
+I, [2018-06-28T09:39:48.206701 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libxext6.
+I, [2018-06-28T09:39:48.207971 #12846]  INFO -- default-ubuntu-1204: Unpacking libxext6 (from .../libxext6_2%3a1.3.0-3ubuntu0.2_amd64.deb) ...
+I, [2018-06-28T09:39:48.238237 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libxmuu1.
+I, [2018-06-28T09:39:48.239455 #12846]  INFO -- default-ubuntu-1204: Unpacking libxmuu1 (from .../libxmuu1_2%3a1.1.0-3_amd64.deb) ...
+I, [2018-06-28T09:39:48.267835 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package openssl.
+I, [2018-06-28T09:39:48.269041 #12846]  INFO -- default-ubuntu-1204: Unpacking openssl (from .../openssl_1.0.1-4ubuntu5.39_amd64.deb) ...
+I, [2018-06-28T09:39:48.317273 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package ca-certificates.
+I, [2018-06-28T09:39:48.318630 #12846]  INFO -- default-ubuntu-1204: Unpacking ca-certificates (from .../ca-certificates_20160104ubuntu0.12.04.1_all.deb) ...
+I, [2018-06-28T09:39:48.370688 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libcurl3.
+I, [2018-06-28T09:39:48.372027 #12846]  INFO -- default-ubuntu-1204: Unpacking libcurl3 (from .../libcurl3_7.22.0-3ubuntu4.17_amd64.deb) ...
+I, [2018-06-28T09:39:48.407480 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libexpat1.
+I, [2018-06-28T09:39:48.408739 #12846]  INFO -- default-ubuntu-1204: Unpacking libexpat1 (from .../libexpat1_2.0.1-7.2ubuntu1.4_amd64.deb) ...
+I, [2018-06-28T09:39:48.442645 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libwrap0.
+I, [2018-06-28T09:39:48.443961 #12846]  INFO -- default-ubuntu-1204: Unpacking libwrap0 (from .../libwrap0_7.6.q-21_amd64.deb) ...
+I, [2018-06-28T09:39:48.475893 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libmagic1.
+I, [2018-06-28T09:39:48.477160 #12846]  INFO -- default-ubuntu-1204: Unpacking libmagic1 (from .../libmagic1_5.09-2ubuntu0.6_amd64.deb) ...
+I, [2018-06-28T09:39:48.516903 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package file.
+I, [2018-06-28T09:39:48.518185 #12846]  INFO -- default-ubuntu-1204: Unpacking file (from .../file_5.09-2ubuntu0.6_amd64.deb) ...
+I, [2018-06-28T09:39:48.547260 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package mime-support.
+I, [2018-06-28T09:39:48.548529 #12846]  INFO -- default-ubuntu-1204: Unpacking mime-support (from .../mime-support_3.51-1ubuntu1.1_all.deb) ...
+I, [2018-06-28T09:39:48.581517 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package python2.7.
+I, [2018-06-28T09:39:48.582809 #12846]  INFO -- default-ubuntu-1204: Unpacking python2.7 (from .../python2.7_2.7.3-0ubuntu3.9_amd64.deb) ...
+I, [2018-06-28T09:39:48.737615 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package python.
+I, [2018-06-28T09:39:48.739151 #12846]  INFO -- default-ubuntu-1204: Unpacking python (from .../python_2.7.3-0ubuntu2.2_amd64.deb) ...
+I, [2018-06-28T09:39:48.780091 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package lsb-release.
+I, [2018-06-28T09:39:48.781436 #12846]  INFO -- default-ubuntu-1204: Unpacking lsb-release (from .../lsb-release_4.0-0ubuntu20.3_all.deb) ...
+I, [2018-06-28T09:39:48.815801 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package sudo.
+I, [2018-06-28T09:39:48.817062 #12846]  INFO -- default-ubuntu-1204: Unpacking sudo (from .../sudo_1.8.3p1-1ubuntu3.7_amd64.deb) ...
+I, [2018-06-28T09:39:48.852436 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package krb5-locales.
+I, [2018-06-28T09:39:48.853634 #12846]  INFO -- default-ubuntu-1204: Unpacking krb5-locales (from .../krb5-locales_1.10+dfsg~beta1-2ubuntu0.7_all.deb) ...
+I, [2018-06-28T09:39:48.877314 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package libsasl2-modules.
+I, [2018-06-28T09:39:48.878568 #12846]  INFO -- default-ubuntu-1204: Unpacking libsasl2-modules (from .../libsasl2-modules_2.1.25.dfsg1-3ubuntu0.1_amd64.deb) ...
+I, [2018-06-28T09:39:48.916246 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package openssh-client.
+I, [2018-06-28T09:39:48.917495 #12846]  INFO -- default-ubuntu-1204: Unpacking openssh-client (from .../openssh-client_1%3a5.9p1-5ubuntu1.10_amd64.deb) ...
+I, [2018-06-28T09:39:48.977337 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package wget.
+I, [2018-06-28T09:39:48.978698 #12846]  INFO -- default-ubuntu-1204: Unpacking wget (from .../wget_1.13.4-2ubuntu1.4_amd64.deb) ...
+I, [2018-06-28T09:39:49.008242 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package xauth.
+I, [2018-06-28T09:39:49.009376 #12846]  INFO -- default-ubuntu-1204: Unpacking xauth (from .../xauth_1%3a1.0.6-1_amd64.deb) ...
+I, [2018-06-28T09:39:49.033962 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package curl.
+I, [2018-06-28T09:39:49.035081 #12846]  INFO -- default-ubuntu-1204: Unpacking curl (from .../curl_7.22.0-3ubuntu4.17_amd64.deb) ...
+I, [2018-06-28T09:39:49.075408 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package openssh-server.
+I, [2018-06-28T09:39:49.076513 #12846]  INFO -- default-ubuntu-1204: Unpacking openssh-server (from .../openssh-server_1%3a5.9p1-5ubuntu1.10_amd64.deb) ...
+I, [2018-06-28T09:39:49.190988 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package tcpd.
+I, [2018-06-28T09:39:49.192337 #12846]  INFO -- default-ubuntu-1204: Unpacking tcpd (from .../tcpd_7.6.q-21_amd64.deb) ...
+I, [2018-06-28T09:39:49.219566 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package ssh-import-id.
+I, [2018-06-28T09:39:49.220700 #12846]  INFO -- default-ubuntu-1204: Unpacking ssh-import-id (from .../ssh-import-id_2.10-0ubuntu1_all.deb) ...
+I, [2018-06-28T09:39:49.263471 #12846]  INFO -- default-ubuntu-1204: Setting up libsqlite3-0 (3.7.9-2ubuntu1.2) ...
+I, [2018-06-28T09:39:49.285400 #12846]  INFO -- default-ubuntu-1204: Setting up libroken18-heimdal (1.6~git20120311.dfsg.1-2ubuntu0.1) ...
+I, [2018-06-28T09:39:49.300159 #12846]  INFO -- default-ubuntu-1204: Setting up libasn1-8-heimdal (1.6~git20120311.dfsg.1-2ubuntu0.1) ...
+I, [2018-06-28T09:39:49.315154 #12846]  INFO -- default-ubuntu-1204: Setting up libbsd0 (0.3.0-2) ...
+I, [2018-06-28T09:39:49.329828 #12846]  INFO -- default-ubuntu-1204: Setting up libedit2 (2.11-20080614-3ubuntu2) ...
+I, [2018-06-28T09:39:49.345499 #12846]  INFO -- default-ubuntu-1204: Setting up libgpg-error0 (1.10-2ubuntu1) ...
+I, [2018-06-28T09:39:49.361335 #12846]  INFO -- default-ubuntu-1204: Setting up libgcrypt11 (1.5.0-3ubuntu0.6) ...
+I, [2018-06-28T09:39:49.376251 #12846]  INFO -- default-ubuntu-1204: Setting up libp11-kit0 (0.12-2ubuntu1) ...
+I, [2018-06-28T09:39:49.390927 #12846]  INFO -- default-ubuntu-1204: Setting up libtasn1-3 (2.10-1ubuntu1.5) ...
+I, [2018-06-28T09:39:49.406605 #12846]  INFO -- default-ubuntu-1204: Setting up libgnutls26 (2.12.14-5ubuntu3.14) ...
+I, [2018-06-28T09:39:49.421522 #12846]  INFO -- default-ubuntu-1204: Setting up libkrb5support0 (1.10+dfsg~beta1-2ubuntu0.7) ...
+I, [2018-06-28T09:39:49.437790 #12846]  INFO -- default-ubuntu-1204: Setting up libk5crypto3 (1.10+dfsg~beta1-2ubuntu0.7) ...
+I, [2018-06-28T09:39:49.452852 #12846]  INFO -- default-ubuntu-1204: Setting up libkeyutils1 (1.5.2-2) ...
+I, [2018-06-28T09:39:49.468235 #12846]  INFO -- default-ubuntu-1204: Setting up libkrb5-3 (1.10+dfsg~beta1-2ubuntu0.7) ...
+I, [2018-06-28T09:39:49.483244 #12846]  INFO -- default-ubuntu-1204: Setting up libgssapi-krb5-2 (1.10+dfsg~beta1-2ubuntu0.7) ...
+I, [2018-06-28T09:39:49.498069 #12846]  INFO -- default-ubuntu-1204: Setting up libhcrypto4-heimdal (1.6~git20120311.dfsg.1-2ubuntu0.1) ...
+I, [2018-06-28T09:39:49.512918 #12846]  INFO -- default-ubuntu-1204: Setting up libheimbase1-heimdal (1.6~git20120311.dfsg.1-2ubuntu0.1) ...
+I, [2018-06-28T09:39:49.527787 #12846]  INFO -- default-ubuntu-1204: Setting up libwind0-heimdal (1.6~git20120311.dfsg.1-2ubuntu0.1) ...
+I, [2018-06-28T09:39:49.542261 #12846]  INFO -- default-ubuntu-1204: Setting up libhx509-5-heimdal (1.6~git20120311.dfsg.1-2ubuntu0.1) ...
+I, [2018-06-28T09:39:49.557065 #12846]  INFO -- default-ubuntu-1204: Setting up libkrb5-26-heimdal (1.6~git20120311.dfsg.1-2ubuntu0.1) ...
+I, [2018-06-28T09:39:49.571723 #12846]  INFO -- default-ubuntu-1204: Setting up libheimntlm0-heimdal (1.6~git20120311.dfsg.1-2ubuntu0.1) ...
+I, [2018-06-28T09:39:49.587409 #12846]  INFO -- default-ubuntu-1204: Setting up libgssapi3-heimdal (1.6~git20120311.dfsg.1-2ubuntu0.1) ...
+I, [2018-06-28T09:39:49.603189 #12846]  INFO -- default-ubuntu-1204: Setting up libidn11 (1.23-2ubuntu0.1) ...
+I, [2018-06-28T09:39:49.622655 #12846]  INFO -- default-ubuntu-1204: Setting up libsasl2-2 (2.1.25.dfsg1-3ubuntu0.1) ...
+I, [2018-06-28T09:39:49.638346 #12846]  INFO -- default-ubuntu-1204: Setting up libldap-2.4-2 (2.4.28-1.1ubuntu4.6) ...
+I, [2018-06-28T09:39:49.657061 #12846]  INFO -- default-ubuntu-1204: Setting up librtmp0 (2.4~20110711.gitc28f1bab-1) ...
+I, [2018-06-28T09:39:49.671558 #12846]  INFO -- default-ubuntu-1204: Setting up libxau6 (1:1.0.6-4) ...
+I, [2018-06-28T09:39:49.687188 #12846]  INFO -- default-ubuntu-1204: Setting up libxdmcp6 (1:1.1.0-4) ...
+I, [2018-06-28T09:39:49.701875 #12846]  INFO -- default-ubuntu-1204: Setting up libxcb1 (1.8.1-1ubuntu0.2) ...
+I, [2018-06-28T09:39:49.716750 #12846]  INFO -- default-ubuntu-1204: Setting up libx11-data (2:1.4.99.1-0ubuntu2.3) ...
+I, [2018-06-28T09:39:49.726094 #12846]  INFO -- default-ubuntu-1204: Setting up libx11-6 (2:1.4.99.1-0ubuntu2.3) ...
+I, [2018-06-28T09:39:49.741783 #12846]  INFO -- default-ubuntu-1204: Setting up libxext6 (2:1.3.0-3ubuntu0.2) ...
+I, [2018-06-28T09:39:49.757104 #12846]  INFO -- default-ubuntu-1204: Setting up libxmuu1 (2:1.1.0-3) ...
+I, [2018-06-28T09:39:49.772414 #12846]  INFO -- default-ubuntu-1204: Setting up openssl (1.0.1-4ubuntu5.39) ...
+I, [2018-06-28T09:39:49.786157 #12846]  INFO -- default-ubuntu-1204: Setting up ca-certificates (20160104ubuntu0.12.04.1) ...
+I, [2018-06-28T09:39:51.615165 #12846]  INFO -- default-ubuntu-1204: [91mUpdating certificates in /etc/ssl/certs... [0m[91m173 added, 0 removed; done.
+I, [2018-06-28T09:39:51.616513 #12846]  INFO -- default-ubuntu-1204: [0m[91mRunning hooks in /etc/ca-certificates/update.d....[0m[91mdone.
+I, [2018-06-28T09:39:51.637123 #12846]  INFO -- default-ubuntu-1204: [0mSetting up libcurl3 (7.22.0-3ubuntu4.17) ...
+I, [2018-06-28T09:39:51.652488 #12846]  INFO -- default-ubuntu-1204: Setting up libexpat1 (2.0.1-7.2ubuntu1.4) ...
+I, [2018-06-28T09:39:51.667572 #12846]  INFO -- default-ubuntu-1204: Setting up libwrap0 (7.6.q-21) ...
+I, [2018-06-28T09:39:51.684612 #12846]  INFO -- default-ubuntu-1204: Setting up libmagic1 (5.09-2ubuntu0.6) ...
+I, [2018-06-28T09:39:51.705370 #12846]  INFO -- default-ubuntu-1204: Setting up file (5.09-2ubuntu0.6) ...
+I, [2018-06-28T09:39:51.714564 #12846]  INFO -- default-ubuntu-1204: Setting up mime-support (3.51-1ubuntu1.1) ...
+I, [2018-06-28T09:39:51.732004 #12846]  INFO -- default-ubuntu-1204: update-alternatives: using /usr/bin/see to provide /usr/bin/view (view) in auto mode.
+I, [2018-06-28T09:39:51.744228 #12846]  INFO -- default-ubuntu-1204: Setting up python2.7 (2.7.3-0ubuntu3.9) ...
+I, [2018-06-28T09:39:52.547912 #12846]  INFO -- default-ubuntu-1204: Setting up python (2.7.3-0ubuntu2.2) ...
+I, [2018-06-28T09:39:52.561187 #12846]  INFO -- default-ubuntu-1204: Setting up lsb-release (4.0-0ubuntu20.3) ...
+I, [2018-06-28T09:39:52.687069 #12846]  INFO -- default-ubuntu-1204: Setting up sudo (1.8.3p1-1ubuntu3.7) ...
+I, [2018-06-28T09:39:52.727786 #12846]  INFO -- default-ubuntu-1204: Setting up krb5-locales (1.10+dfsg~beta1-2ubuntu0.7) ...
+I, [2018-06-28T09:39:52.737350 #12846]  INFO -- default-ubuntu-1204: Setting up libsasl2-modules (2.1.25.dfsg1-3ubuntu0.1) ...
+I, [2018-06-28T09:39:52.747201 #12846]  INFO -- default-ubuntu-1204: Setting up openssh-client (1:5.9p1-5ubuntu1.10) ...
+I, [2018-06-28T09:39:52.868037 #12846]  INFO -- default-ubuntu-1204: Setting up wget (1.13.4-2ubuntu1.4) ...
+I, [2018-06-28T09:39:52.881402 #12846]  INFO -- default-ubuntu-1204: Setting up xauth (1:1.0.6-1) ...
+I, [2018-06-28T09:39:52.890932 #12846]  INFO -- default-ubuntu-1204: Setting up curl (7.22.0-3ubuntu4.17) ...
+I, [2018-06-28T09:39:52.900269 #12846]  INFO -- default-ubuntu-1204: Setting up openssh-server (1:5.9p1-5ubuntu1.10) ...
+I, [2018-06-28T09:39:53.187403 #12846]  INFO -- default-ubuntu-1204: [91mCreating SSH2 RSA key; this may take some time ...[0m[91m
+I, [2018-06-28T09:39:53.243599 #12846]  INFO -- default-ubuntu-1204: [0m[91mCreating SSH2 DSA key; this may take some time ...[0m[91m
+I, [2018-06-28T09:39:53.247420 #12846]  INFO -- default-ubuntu-1204: [0m[91mCreating SSH2 ECDSA key; this may take some time ...[0m[91m
+I, [2018-06-28T09:39:53.329295 #12846]  INFO -- default-ubuntu-1204: [0m[91minvoke-rc.d: policy-rc.d denied execution of stop.
+I, [2018-06-28T09:39:53.356458 #12846]  INFO -- default-ubuntu-1204: [0mSetting up tcpd (7.6.q-21) ...
+I, [2018-06-28T09:39:53.366010 #12846]  INFO -- default-ubuntu-1204: Setting up ssh-import-id (2.10-0ubuntu1) ...
+I, [2018-06-28T09:39:53.378530 #12846]  INFO -- default-ubuntu-1204: Processing triggers for libc-bin ...
+I, [2018-06-28T09:39:53.382614 #12846]  INFO -- default-ubuntu-1204: ldconfig deferred processing now taking place
+I, [2018-06-28T09:39:54.448876 #12846]  INFO -- default-ubuntu-1204: Removing intermediate container 05a2b1fd7d9b
+I, [2018-06-28T09:39:54.449276 #12846]  INFO -- default-ubuntu-1204:  ---> 82eb51344097
+I, [2018-06-28T09:39:54.449592 #12846]  INFO -- default-ubuntu-1204: Step 8/17 : RUN if ! getent passwd kitchen; then                 useradd -d /home/kitchen -m -s /bin/bash -p '*' kitchen;               fi
+I, [2018-06-28T09:39:54.469989 #12846]  INFO -- default-ubuntu-1204:  ---> Running in 0c8cefa331e3
+I, [2018-06-28T09:39:54.970115 #12846]  INFO -- default-ubuntu-1204: Removing intermediate container 0c8cefa331e3
+I, [2018-06-28T09:39:54.970480 #12846]  INFO -- default-ubuntu-1204:  ---> 74e587ae359e
+I, [2018-06-28T09:39:54.970825 #12846]  INFO -- default-ubuntu-1204: Step 9/17 : RUN echo "kitchen ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+I, [2018-06-28T09:39:54.987924 #12846]  INFO -- default-ubuntu-1204:  ---> Running in 1a3704dc46a6
+I, [2018-06-28T09:39:55.432235 #12846]  INFO -- default-ubuntu-1204: Removing intermediate container 1a3704dc46a6
+I, [2018-06-28T09:39:55.432565 #12846]  INFO -- default-ubuntu-1204:  ---> 118ecb185336
+I, [2018-06-28T09:39:55.432918 #12846]  INFO -- default-ubuntu-1204: Step 10/17 : RUN echo "Defaults !requiretty" >> /etc/sudoers
+I, [2018-06-28T09:39:55.450020 #12846]  INFO -- default-ubuntu-1204:  ---> Running in f0dbd162ae08
+I, [2018-06-28T09:39:55.886290 #12846]  INFO -- default-ubuntu-1204: Removing intermediate container f0dbd162ae08
+I, [2018-06-28T09:39:55.886652 #12846]  INFO -- default-ubuntu-1204:  ---> bdfd46d0c159
+I, [2018-06-28T09:39:55.886978 #12846]  INFO -- default-ubuntu-1204: Step 11/17 : RUN mkdir -p /home/kitchen/.ssh
+I, [2018-06-28T09:39:55.904737 #12846]  INFO -- default-ubuntu-1204:  ---> Running in e9a0a301913a
+I, [2018-06-28T09:39:56.360962 #12846]  INFO -- default-ubuntu-1204: Removing intermediate container e9a0a301913a
+I, [2018-06-28T09:39:56.361288 #12846]  INFO -- default-ubuntu-1204:  ---> d3464dcacc0a
+I, [2018-06-28T09:39:56.361617 #12846]  INFO -- default-ubuntu-1204: Step 12/17 : RUN chown -R kitchen /home/kitchen/.ssh
+I, [2018-06-28T09:39:56.379030 #12846]  INFO -- default-ubuntu-1204:  ---> Running in 923f4290fdcf
+I, [2018-06-28T09:39:56.830008 #12846]  INFO -- default-ubuntu-1204: Removing intermediate container 923f4290fdcf
+I, [2018-06-28T09:39:56.830357 #12846]  INFO -- default-ubuntu-1204:  ---> 5bf1b3257029
+I, [2018-06-28T09:39:56.830764 #12846]  INFO -- default-ubuntu-1204: Step 13/17 : RUN chmod 0700 /home/kitchen/.ssh
+I, [2018-06-28T09:39:56.848463 #12846]  INFO -- default-ubuntu-1204:  ---> Running in 7bc477b1ce41
+I, [2018-06-28T09:39:57.305052 #12846]  INFO -- default-ubuntu-1204: Removing intermediate container 7bc477b1ce41
+I, [2018-06-28T09:39:57.305370 #12846]  INFO -- default-ubuntu-1204:  ---> 67077c9effff
+I, [2018-06-28T09:39:57.305693 #12846]  INFO -- default-ubuntu-1204: Step 14/17 : RUN touch /home/kitchen/.ssh/authorized_keys
+I, [2018-06-28T09:39:57.322701 #12846]  INFO -- default-ubuntu-1204:  ---> Running in d09afeefcae5
+I, [2018-06-28T09:39:57.768622 #12846]  INFO -- default-ubuntu-1204: Removing intermediate container d09afeefcae5
+I, [2018-06-28T09:39:57.768955 #12846]  INFO -- default-ubuntu-1204:  ---> c8fd30640b85
+I, [2018-06-28T09:39:57.769361 #12846]  INFO -- default-ubuntu-1204: Step 15/17 : RUN chown kitchen /home/kitchen/.ssh/authorized_keys
+I, [2018-06-28T09:39:57.786256 #12846]  INFO -- default-ubuntu-1204:  ---> Running in c92832ac968a
+I, [2018-06-28T09:39:58.232436 #12846]  INFO -- default-ubuntu-1204: Removing intermediate container c92832ac968a
+I, [2018-06-28T09:39:58.232736 #12846]  INFO -- default-ubuntu-1204:  ---> 4b5f09c1a818
+I, [2018-06-28T09:39:58.233070 #12846]  INFO -- default-ubuntu-1204: Step 16/17 : RUN chmod 0600 /home/kitchen/.ssh/authorized_keys
+I, [2018-06-28T09:39:58.250641 #12846]  INFO -- default-ubuntu-1204:  ---> Running in 33a881221c50
+I, [2018-06-28T09:39:58.697457 #12846]  INFO -- default-ubuntu-1204: Removing intermediate container 33a881221c50
+I, [2018-06-28T09:39:58.697777 #12846]  INFO -- default-ubuntu-1204:  ---> 313ee0564174
+I, [2018-06-28T09:39:58.698224 #12846]  INFO -- default-ubuntu-1204: Step 17/17 : RUN echo ssh-rsa\ AAAAB3NzaC1yc2EAAAADAQABAAABAQC\+utCTkSARsroh/Ew7zklI79byc\+9VZtLh/4sFkoYg5oxL2dh4gL12ZnBjy2NRru0ZEwAHcPDjvhPIha9refWVMokfrfopFBSyzii4oypT98IVYTUJNs4mFPBDrxsrcGDuwqeCzpMxwh5TQATVaxQCdU7oiHMnIi\+uE6wDYdKLOZVVoLxluMaKAyEmP53VAQaepPq1VWP4Cnud5oiUTRYe3r2dTThV01XvkvivEmpOr3n63j9DJYDzA30tLBvpyZSSzWYF627lAxehD6yj/qPJLyPGJDh206At\+RZUupgqPk9CSIWZMdxPRv4USvQUPkBZSgnXgal97Ok/Zgo583Ub\ kitchen_docker_key >> /home/kitchen/.ssh/authorized_keys
+I, [2018-06-28T09:39:58.716501 #12846]  INFO -- default-ubuntu-1204:  ---> Running in a6b698933768
+I, [2018-06-28T09:39:59.159289 #12846]  INFO -- default-ubuntu-1204: Removing intermediate container a6b698933768
+I, [2018-06-28T09:39:59.159614 #12846]  INFO -- default-ubuntu-1204:  ---> 444c57c97388
+I, [2018-06-28T09:39:59.161327 #12846]  INFO -- default-ubuntu-1204: Successfully built 444c57c97388
+I, [2018-06-28T09:39:59.273723 #12846]  INFO -- default-ubuntu-1204: 5eeeb13a5a4ebd41e5049b452609524c168790021b9d956012ade6daa6bb57af
+I, [2018-06-28T09:39:59.624162 #12846]  INFO -- default-ubuntu-1204: 0.0.0.0:32771
+I, [2018-06-28T09:39:59.706182 #12846]  INFO -- default-ubuntu-1204: [SSH] Established
+I, [2018-06-28T09:39:59.707352 #12846]  INFO -- default-ubuntu-1204: Finished creating <default-ubuntu-1204> (0m30.57s).
+I, [2018-06-28T09:39:59.707518 #12846]  INFO -- default-ubuntu-1204: -----> Converging <default-ubuntu-1204>...
+I, [2018-06-28T09:39:59.708061 #12846]  INFO -- default-ubuntu-1204: Preparing files for transfer
+I, [2018-06-28T09:39:59.708216 #12846]  INFO -- default-ubuntu-1204: Preparing dna.json
+I, [2018-06-28T09:39:59.708482 #12846]  INFO -- default-ubuntu-1204: Resolving cookbook dependencies with Berkshelf 7.0.2...
+I, [2018-06-28T09:40:04.348969 #12846]  INFO -- default-ubuntu-1204: Removing non-cookbook files before transfer
+I, [2018-06-28T09:40:04.352808 #12846]  INFO -- default-ubuntu-1204: Preparing validation.pem
+I, [2018-06-28T09:40:04.353084 #12846]  INFO -- default-ubuntu-1204: Preparing client.rb
+I, [2018-06-28T09:40:04.421412 #12846]  INFO -- default-ubuntu-1204: -----> Installing Chef Omnibus (install only if missing)
+I, [2018-06-28T09:40:04.422205 #12846]  INFO -- default-ubuntu-1204: Downloading https://omnitruck.chef.io/install.sh to file /tmp/install.sh
+I, [2018-06-28T09:40:04.422668 #12846]  INFO -- default-ubuntu-1204: Trying wget...
+I, [2018-06-28T09:40:04.491235 #12846]  INFO -- default-ubuntu-1204: Download complete.
+I, [2018-06-28T09:40:04.502541 #12846]  INFO -- default-ubuntu-1204: ubuntu 12.04 x86_64
+I, [2018-06-28T09:40:04.502955 #12846]  INFO -- default-ubuntu-1204: Getting information for chef stable  for ubuntu...
+I, [2018-06-28T09:40:04.503321 #12846]  INFO -- default-ubuntu-1204: downloading https://omnitruck.chef.io/stable/chef/metadata?v=&p=ubuntu&pv=12.04&m=x86_64
+I, [2018-06-28T09:40:04.503649 #12846]  INFO -- default-ubuntu-1204:   to file /tmp/install.sh.15/metadata.txt
+I, [2018-06-28T09:40:04.504242 #12846]  INFO -- default-ubuntu-1204: trying wget...
+I, [2018-06-28T09:40:04.557106 #12846]  INFO -- default-ubuntu-1204: sha1	3eef728d8a096b6fce191216b51ba5fe4b064ea8
+I, [2018-06-28T09:40:04.557156 #12846]  INFO -- default-ubuntu-1204: sha256	df7201e5fb5113b8f68caa0cf4172dd7004282e947b449e0eeb094ea6e630227
+I, [2018-06-28T09:40:04.557179 #12846]  INFO -- default-ubuntu-1204: url	https://packages.chef.io/files/stable/chef/13.4.24/ubuntu/12.04/chef_13.4.24-1_amd64.deb
+I, [2018-06-28T09:40:04.557645 #12846]  INFO -- default-ubuntu-1204: version	13.4.24
+I, [2018-06-28T09:40:04.559326 #12846]  INFO -- default-ubuntu-1204: downloaded metadata file looks valid...
+I, [2018-06-28T09:40:04.564173 #12846]  INFO -- default-ubuntu-1204: downloading https://packages.chef.io/files/stable/chef/13.4.24/ubuntu/12.04/chef_13.4.24-1_amd64.deb
+I, [2018-06-28T09:40:04.564515 #12846]  INFO -- default-ubuntu-1204:   to file /tmp/install.sh.15/chef_13.4.24-1_amd64.deb
+I, [2018-06-28T09:40:04.565070 #12846]  INFO -- default-ubuntu-1204: trying wget...
+I, [2018-06-28T09:40:05.948344 #12846]  INFO -- default-ubuntu-1204: Comparing checksum with sha256sum...
+I, [2018-06-28T09:40:06.201236 #12846]  INFO -- default-ubuntu-1204: 
+I, [2018-06-28T09:40:06.201669 #12846]  INFO -- default-ubuntu-1204: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2018-06-28T09:40:06.201717 #12846]  INFO -- default-ubuntu-1204: 
+I, [2018-06-28T09:40:06.202085 #12846]  INFO -- default-ubuntu-1204: You are installing an omnibus package without a version pin.  If you are installing
+I, [2018-06-28T09:40:06.202136 #12846]  INFO -- default-ubuntu-1204: on production servers via an automated process this is DANGEROUS and you will
+I, [2018-06-28T09:40:06.202159 #12846]  INFO -- default-ubuntu-1204: be upgraded without warning on new releases, even to new major releases.
+I, [2018-06-28T09:40:06.202177 #12846]  INFO -- default-ubuntu-1204: Letting the version float is only appropriate in desktop, test, development or
+I, [2018-06-28T09:40:06.202192 #12846]  INFO -- default-ubuntu-1204: CI/CD environments.
+I, [2018-06-28T09:40:06.202207 #12846]  INFO -- default-ubuntu-1204: 
+I, [2018-06-28T09:40:06.202221 #12846]  INFO -- default-ubuntu-1204: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2018-06-28T09:40:06.202235 #12846]  INFO -- default-ubuntu-1204: 
+I, [2018-06-28T09:40:06.202249 #12846]  INFO -- default-ubuntu-1204: Installing chef 
+I, [2018-06-28T09:40:06.202745 #12846]  INFO -- default-ubuntu-1204: installing with dpkg...
+I, [2018-06-28T09:40:06.239578 #12846]  INFO -- default-ubuntu-1204: Selecting previously unselected package chef.
+I, [2018-06-28T09:40:06.248593 #12846]  INFO -- default-ubuntu-1204: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 9209 files and directories currently installed.)
+I, [2018-06-28T09:40:06.249143 #12846]  INFO -- default-ubuntu-1204: Unpacking chef (from .../chef_13.4.24-1_amd64.deb) ...
+I, [2018-06-28T09:40:11.064888 #12846]  INFO -- default-ubuntu-1204: Setting up chef (13.4.24-1) ...
+I, [2018-06-28T09:40:11.167697 #12846]  INFO -- default-ubuntu-1204: Thank you for installing Chef!
+I, [2018-06-28T09:40:11.263388 #12846]  INFO -- default-ubuntu-1204: Transferring files to <default-ubuntu-1204>
+I, [2018-06-28T09:40:16.234536 #12846]  INFO -- default-ubuntu-1204: Starting Chef Client, version 13.4.24
+I, [2018-06-28T09:40:17.023722 #12846]  INFO -- default-ubuntu-1204: Creating a new client identity for default-ubuntu-1204 using the validator key.
+I, [2018-06-28T09:40:17.303280 #12846]  INFO -- default-ubuntu-1204: resolving cookbooks for run list: ["apache::default"]
+I, [2018-06-28T09:40:17.472208 #12846]  INFO -- default-ubuntu-1204: Synchronizing Cookbooks:
+I, [2018-06-28T09:40:17.523044 #12846]  INFO -- default-ubuntu-1204:   - apache (0.1.5)
+I, [2018-06-28T09:40:17.529683 #12846]  INFO -- default-ubuntu-1204:   - build-essential (8.1.1)
+I, [2018-06-28T09:40:17.536819 #12846]  INFO -- default-ubuntu-1204:   - php (6.0.0)
+I, [2018-06-28T09:40:17.563694 #12846]  INFO -- default-ubuntu-1204:   - yum-epel (3.1.0)
+I, [2018-06-28T09:40:17.573926 #12846]  INFO -- default-ubuntu-1204:   - seven_zip (3.0.0)
+I, [2018-06-28T09:40:17.597743 #12846]  INFO -- default-ubuntu-1204:   - mingw (2.0.2)
+I, [2018-06-28T09:40:17.601037 #12846]  INFO -- default-ubuntu-1204:   - windows (4.3.2)
+I, [2018-06-28T09:40:17.601914 #12846]  INFO -- default-ubuntu-1204: Installing Cookbook Gems:
+I, [2018-06-28T09:40:17.624333 #12846]  INFO -- default-ubuntu-1204: Compiling Cookbooks...
+I, [2018-06-28T09:40:17.703641 #12846]  INFO -- default-ubuntu-1204: Converging 9 resources
+I, [2018-06-28T09:40:17.704600 #12846]  INFO -- default-ubuntu-1204: Recipe: apache::default
+I, [2018-06-28T09:40:25.671962 #12846]  INFO -- default-ubuntu-1204:   * apt_package[httpd] action install
+I, [2018-06-28T09:40:25.672954 #12846]  INFO -- default-ubuntu-1204:     - install version 2.2.22-1ubuntu1.11 of package apache2
+I, [2018-06-28T09:40:25.675489 #12846]  INFO -- default-ubuntu-1204:   * directory[/content/sites/chef1] action create
+I, [2018-06-28T09:40:25.677276 #12846]  INFO -- default-ubuntu-1204:     - create new directory /content/sites/chef1
+I, [2018-06-28T09:40:25.678756 #12846]  INFO -- default-ubuntu-1204:     - change mode from '' to '0755'
+I, [2018-06-28T09:40:25.682590 #12846]  INFO -- default-ubuntu-1204:   * template[/etc/apache2/sites-enabled/chef1.conf] action create
+I, [2018-06-28T09:40:25.684575 #12846]  INFO -- default-ubuntu-1204:     - create new file /etc/apache2/sites-enabled/chef1.conf
+I, [2018-06-28T09:40:25.685482 #12846]  INFO -- default-ubuntu-1204:     - update content in file /etc/apache2/sites-enabled/chef1.conf from none to 45fcd4
+I, [2018-06-28T09:40:25.686357 #12846]  INFO -- default-ubuntu-1204:     --- /etc/apache2/sites-enabled/chef1.conf	2018-06-28 09:40:25.675791379 +0000
+I, [2018-06-28T09:40:25.687201 #12846]  INFO -- default-ubuntu-1204:     +++ /etc/apache2/sites-enabled/.chef-chef120180628-103-179uw77.conf	2018-06-28 09:40:25.675791379 +0000
+I, [2018-06-28T09:40:25.688038 #12846]  INFO -- default-ubuntu-1204:     @@ -1 +1,13 @@
+I, [2018-06-28T09:40:25.688853 #12846]  INFO -- default-ubuntu-1204:     +       NameVirtualHost *:80
+I, [2018-06-28T09:40:25.689657 #12846]  INFO -- default-ubuntu-1204:     +
+I, [2018-06-28T09:40:25.690487 #12846]  INFO -- default-ubuntu-1204:     +<VirtualHost *:80 >
+I, [2018-06-28T09:40:25.691360 #12846]  INFO -- default-ubuntu-1204:     +        ServerName chef1.cheftraining.com
+I, [2018-06-28T09:40:25.692177 #12846]  INFO -- default-ubuntu-1204:     +        DocumentRoot /content/sites/chef1
+I, [2018-06-28T09:40:25.693160 #12846]  INFO -- default-ubuntu-1204:     +<Directory /content/sites/chef1 >
+I, [2018-06-28T09:40:25.694066 #12846]  INFO -- default-ubuntu-1204:     +        Options Indexes FollowSymLinks MultiViews
+I, [2018-06-28T09:40:25.694588 #12846]  INFO -- default-ubuntu-1204:     +        AllowOverride None
+I, [2018-06-28T09:40:25.695318 #12846]  INFO -- default-ubuntu-1204:     +        Order allow,deny
+I, [2018-06-28T09:40:25.696235 #12846]  INFO -- default-ubuntu-1204:     +        allow from all
+I, [2018-06-28T09:40:25.696445 #12846]  INFO -- default-ubuntu-1204:     +</Directory>
+I, [2018-06-28T09:40:25.697468 #12846]  INFO -- default-ubuntu-1204:     +</VirtualHost>
+I, [2018-06-28T09:40:25.697859 #12846]  INFO -- default-ubuntu-1204:     - change mode from '' to '0644'
+I, [2018-06-28T09:40:25.700704 #12846]  INFO -- default-ubuntu-1204:   * template[/content/sites/chef1/index.html] action create
+I, [2018-06-28T09:40:25.702234 #12846]  INFO -- default-ubuntu-1204:     - create new file /content/sites/chef1/index.html
+I, [2018-06-28T09:40:25.703165 #12846]  INFO -- default-ubuntu-1204:     - update content in file /content/sites/chef1/index.html from none to ed3fd7
+I, [2018-06-28T09:40:25.704032 #12846]  INFO -- default-ubuntu-1204:     --- /content/sites/chef1/index.html	2018-06-28 09:40:25.695791466 +0000
+I, [2018-06-28T09:40:25.704902 #12846]  INFO -- default-ubuntu-1204:     +++ /content/sites/chef1/.chef-index20180628-103-3ens32.html	2018-06-28 09:40:25.695791466 +0000
+I, [2018-06-28T09:40:25.705869 #12846]  INFO -- default-ubuntu-1204:     @@ -1 +1,11 @@
+I, [2018-06-28T09:40:25.706675 #12846]  INFO -- default-ubuntu-1204:     +<html>
+I, [2018-06-28T09:40:25.707497 #12846]  INFO -- default-ubuntu-1204:     +<head>
+I, [2018-06-28T09:40:25.708592 #12846]  INFO -- default-ubuntu-1204:     +<title></title>
+I, [2018-06-28T09:40:25.709090 #12846]  INFO -- default-ubuntu-1204:     +</head>
+I, [2018-06-28T09:40:25.709857 #12846]  INFO -- default-ubuntu-1204:     +<body>
+I, [2018-06-28T09:40:25.710579 #12846]  INFO -- default-ubuntu-1204:     +<h1></h1>
+I, [2018-06-28T09:40:25.711505 #12846]  INFO -- default-ubuntu-1204:     +<h2>still cooking</h2>
+I, [2018-06-28T09:40:25.711713 #12846]  INFO -- default-ubuntu-1204:     +<h3><%= @author_name %</h3>
+I, [2018-06-28T09:40:25.711969 #12846]  INFO -- default-ubuntu-1204:     +</body>
+I, [2018-06-28T09:40:25.712819 #12846]  INFO -- default-ubuntu-1204:     +</html>
+I, [2018-06-28T09:40:25.713396 #12846]  INFO -- default-ubuntu-1204:     - change mode from '' to '0644'
+I, [2018-06-28T09:40:25.714913 #12846]  INFO -- default-ubuntu-1204:   * directory[/content/sites/chef2] action create
+I, [2018-06-28T09:40:25.716388 #12846]  INFO -- default-ubuntu-1204:     - create new directory /content/sites/chef2
+I, [2018-06-28T09:40:25.717640 #12846]  INFO -- default-ubuntu-1204:     - change mode from '' to '0755'
+I, [2018-06-28T09:40:25.720465 #12846]  INFO -- default-ubuntu-1204:   * template[/etc/apache2/sites-enabled/chef2.conf] action create
+I, [2018-06-28T09:40:25.722046 #12846]  INFO -- default-ubuntu-1204:     - create new file /etc/apache2/sites-enabled/chef2.conf
+I, [2018-06-28T09:40:25.722911 #12846]  INFO -- default-ubuntu-1204:     - update content in file /etc/apache2/sites-enabled/chef2.conf from none to bed9a1
+I, [2018-06-28T09:40:25.723828 #12846]  INFO -- default-ubuntu-1204:     --- /etc/apache2/sites-enabled/chef2.conf	2018-06-28 09:40:25.715791554 +0000
+I, [2018-06-28T09:40:25.724632 #12846]  INFO -- default-ubuntu-1204:     +++ /etc/apache2/sites-enabled/.chef-chef220180628-103-123v5mt.conf	2018-06-28 09:40:25.715791554 +0000
+I, [2018-06-28T09:40:25.725497 #12846]  INFO -- default-ubuntu-1204:     @@ -1 +1,13 @@
+I, [2018-06-28T09:40:25.726310 #12846]  INFO -- default-ubuntu-1204:     +       NameVirtualHost *:80
+I, [2018-06-28T09:40:25.727156 #12846]  INFO -- default-ubuntu-1204:     +
+I, [2018-06-28T09:40:25.727981 #12846]  INFO -- default-ubuntu-1204:     +<VirtualHost *:80 >
+I, [2018-06-28T09:40:25.728756 #12846]  INFO -- default-ubuntu-1204:     +        ServerName chef2.cheftraining.com
+I, [2018-06-28T09:40:25.729566 #12846]  INFO -- default-ubuntu-1204:     +        DocumentRoot /content/sites/chef2
+I, [2018-06-28T09:40:25.730331 #12846]  INFO -- default-ubuntu-1204:     +<Directory /content/sites/chef2 >
+I, [2018-06-28T09:40:25.731035 #12846]  INFO -- default-ubuntu-1204:     +        Options Indexes FollowSymLinks MultiViews
+I, [2018-06-28T09:40:25.732109 #12846]  INFO -- default-ubuntu-1204:     +        AllowOverride None
+I, [2018-06-28T09:40:25.732584 #12846]  INFO -- default-ubuntu-1204:     +        Order allow,deny
+I, [2018-06-28T09:40:25.733410 #12846]  INFO -- default-ubuntu-1204:     +        allow from all
+I, [2018-06-28T09:40:25.733692 #12846]  INFO -- default-ubuntu-1204:     +</Directory>
+I, [2018-06-28T09:40:25.734297 #12846]  INFO -- default-ubuntu-1204:     +</VirtualHost>
+I, [2018-06-28T09:40:25.735120 #12846]  INFO -- default-ubuntu-1204:     - change mode from '' to '0644'
+I, [2018-06-28T09:40:25.737955 #12846]  INFO -- default-ubuntu-1204:   * template[/content/sites/chef2/index.html] action create
+I, [2018-06-28T09:40:25.739606 #12846]  INFO -- default-ubuntu-1204:     - create new file /content/sites/chef2/index.html
+I, [2018-06-28T09:40:25.740478 #12846]  INFO -- default-ubuntu-1204:     - update content in file /content/sites/chef2/index.html from none to ed3fd7
+I, [2018-06-28T09:40:25.741312 #12846]  INFO -- default-ubuntu-1204:     --- /content/sites/chef2/index.html	2018-06-28 09:40:25.731791624 +0000
+I, [2018-06-28T09:40:25.742156 #12846]  INFO -- default-ubuntu-1204:     +++ /content/sites/chef2/.chef-index20180628-103-1izssa4.html	2018-06-28 09:40:25.731791624 +0000
+I, [2018-06-28T09:40:25.743010 #12846]  INFO -- default-ubuntu-1204:     @@ -1 +1,11 @@
+I, [2018-06-28T09:40:25.743867 #12846]  INFO -- default-ubuntu-1204:     +<html>
+I, [2018-06-28T09:40:25.744663 #12846]  INFO -- default-ubuntu-1204:     +<head>
+I, [2018-06-28T09:40:25.745205 #12846]  INFO -- default-ubuntu-1204:     +<title></title>
+I, [2018-06-28T09:40:25.745935 #12846]  INFO -- default-ubuntu-1204:     +</head>
+I, [2018-06-28T09:40:25.746580 #12846]  INFO -- default-ubuntu-1204:     +<body>
+I, [2018-06-28T09:40:25.747457 #12846]  INFO -- default-ubuntu-1204:     +<h1></h1>
+I, [2018-06-28T09:40:25.747907 #12846]  INFO -- default-ubuntu-1204:     +<h2>still cooking</h2>
+I, [2018-06-28T09:40:25.748747 #12846]  INFO -- default-ubuntu-1204:     +<h3><%= @author_name %</h3>
+I, [2018-06-28T09:40:25.748996 #12846]  INFO -- default-ubuntu-1204:     +</body>
+I, [2018-06-28T09:40:25.749544 #12846]  INFO -- default-ubuntu-1204:     +</html>
+I, [2018-06-28T09:40:25.750313 #12846]  INFO -- default-ubuntu-1204:     - change mode from '' to '0644'
+I, [2018-06-28T09:40:25.751867 #12846]  INFO -- default-ubuntu-1204:   * execute[rm /etc/httpd/conf.d/welcome.conf] action run (skipped due to only_if)
+I, [2018-06-28T09:40:25.813932 #12846]  INFO -- default-ubuntu-1204:   * service[httpd] action enable (up to date)
+I, [2018-06-28T09:40:25.892591 #12846]  INFO -- default-ubuntu-1204:   * service[httpd] action start
+I, [2018-06-28T09:40:25.893800 #12846]  INFO -- default-ubuntu-1204:     - start service service[httpd]
+I, [2018-06-28T09:40:28.025819 #12846]  INFO -- default-ubuntu-1204:   * service[httpd] action restart
+I, [2018-06-28T09:40:28.027049 #12846]  INFO -- default-ubuntu-1204:     - restart service service[httpd]
+I, [2018-06-28T09:40:28.081090 #12846]  INFO -- default-ubuntu-1204: 
+I, [2018-06-28T09:40:28.081791 #12846]  INFO -- default-ubuntu-1204: Running handlers:
+I, [2018-06-28T09:40:28.082194 #12846]  INFO -- default-ubuntu-1204: Running handlers complete
+I, [2018-06-28T09:40:28.082970 #12846]  INFO -- default-ubuntu-1204: Chef Client finished, 9/11 resources updated in 11 seconds
+I, [2018-06-28T09:40:28.121743 #12846]  INFO -- default-ubuntu-1204: Downloading files from <default-ubuntu-1204>
+I, [2018-06-28T09:40:28.127840 #12846]  INFO -- default-ubuntu-1204: Finished converging <default-ubuntu-1204> (0m28.42s).

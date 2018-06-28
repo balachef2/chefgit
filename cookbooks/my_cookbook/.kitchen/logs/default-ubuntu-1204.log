@@ -1,0 +1,123 @@
+I, [2018-06-28T10:01:37.619964 #24762]  INFO -- default-ubuntu-1204: -----> Creating <default-ubuntu-1204>...
+I, [2018-06-28T10:01:37.706927 #24762]  INFO -- default-ubuntu-1204: Sending build context to Docker daemon  91.14kB
+I, [2018-06-28T10:01:38.005916 #24762]  INFO -- default-ubuntu-1204: Step 1/17 : FROM ubuntu:12.04
+I, [2018-06-28T10:01:38.005994 #24762]  INFO -- default-ubuntu-1204:  ---> 5b117edd0b76
+I, [2018-06-28T10:01:38.006018 #24762]  INFO -- default-ubuntu-1204: Step 2/17 : RUN dpkg-divert --local --rename --add /sbin/initctl
+I, [2018-06-28T10:01:38.006558 #24762]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:01:38.006592 #24762]  INFO -- default-ubuntu-1204:  ---> 838498336a91
+I, [2018-06-28T10:01:38.006624 #24762]  INFO -- default-ubuntu-1204: Step 3/17 : RUN ln -sf /bin/true /sbin/initctl
+I, [2018-06-28T10:01:38.007264 #24762]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:01:38.007501 #24762]  INFO -- default-ubuntu-1204:  ---> b33b2bfa8be5
+I, [2018-06-28T10:01:38.007869 #24762]  INFO -- default-ubuntu-1204: Step 4/17 : ENV DEBIAN_FRONTEND noninteractive
+I, [2018-06-28T10:01:38.008758 #24762]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:01:38.009001 #24762]  INFO -- default-ubuntu-1204:  ---> bde31da8c5a1
+I, [2018-06-28T10:01:38.009369 #24762]  INFO -- default-ubuntu-1204: Step 5/17 : ENV container docker
+I, [2018-06-28T10:01:38.010123 #24762]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:01:38.010470 #24762]  INFO -- default-ubuntu-1204:  ---> 24b70a33339d
+I, [2018-06-28T10:01:38.010802 #24762]  INFO -- default-ubuntu-1204: Step 6/17 : RUN apt-get update
+I, [2018-06-28T10:01:38.011504 #24762]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:01:38.011811 #24762]  INFO -- default-ubuntu-1204:  ---> 68e398ec205e
+I, [2018-06-28T10:01:38.012138 #24762]  INFO -- default-ubuntu-1204: Step 7/17 : RUN apt-get install -y sudo openssh-server curl lsb-release
+I, [2018-06-28T10:01:38.012848 #24762]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:01:38.013088 #24762]  INFO -- default-ubuntu-1204:  ---> 82eb51344097
+I, [2018-06-28T10:01:38.013602 #24762]  INFO -- default-ubuntu-1204: Step 8/17 : RUN if ! getent passwd kitchen; then                 useradd -d /home/kitchen -m -s /bin/bash -p '*' kitchen;               fi
+I, [2018-06-28T10:01:38.014179 #24762]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:01:38.014395 #24762]  INFO -- default-ubuntu-1204:  ---> 74e587ae359e
+I, [2018-06-28T10:01:38.014836 #24762]  INFO -- default-ubuntu-1204: Step 9/17 : RUN echo "kitchen ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+I, [2018-06-28T10:01:38.015487 #24762]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:01:38.015713 #24762]  INFO -- default-ubuntu-1204:  ---> 118ecb185336
+I, [2018-06-28T10:01:38.016011 #24762]  INFO -- default-ubuntu-1204: Step 10/17 : RUN echo "Defaults !requiretty" >> /etc/sudoers
+I, [2018-06-28T10:01:38.016701 #24762]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:01:38.016928 #24762]  INFO -- default-ubuntu-1204:  ---> bdfd46d0c159
+I, [2018-06-28T10:01:38.017225 #24762]  INFO -- default-ubuntu-1204: Step 11/17 : RUN mkdir -p /home/kitchen/.ssh
+I, [2018-06-28T10:01:38.017876 #24762]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:01:38.018148 #24762]  INFO -- default-ubuntu-1204:  ---> d3464dcacc0a
+I, [2018-06-28T10:01:38.018556 #24762]  INFO -- default-ubuntu-1204: Step 12/17 : RUN chown -R kitchen /home/kitchen/.ssh
+I, [2018-06-28T10:01:38.019205 #24762]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:01:38.019438 #24762]  INFO -- default-ubuntu-1204:  ---> 5bf1b3257029
+I, [2018-06-28T10:01:38.019909 #24762]  INFO -- default-ubuntu-1204: Step 13/17 : RUN chmod 0700 /home/kitchen/.ssh
+I, [2018-06-28T10:01:38.020476 #24762]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:01:38.020752 #24762]  INFO -- default-ubuntu-1204:  ---> 67077c9effff
+I, [2018-06-28T10:01:38.021106 #24762]  INFO -- default-ubuntu-1204: Step 14/17 : RUN touch /home/kitchen/.ssh/authorized_keys
+I, [2018-06-28T10:01:38.021835 #24762]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:01:38.022097 #24762]  INFO -- default-ubuntu-1204:  ---> c8fd30640b85
+I, [2018-06-28T10:01:38.022455 #24762]  INFO -- default-ubuntu-1204: Step 15/17 : RUN chown kitchen /home/kitchen/.ssh/authorized_keys
+I, [2018-06-28T10:01:38.023111 #24762]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:01:38.023375 #24762]  INFO -- default-ubuntu-1204:  ---> 4b5f09c1a818
+I, [2018-06-28T10:01:38.023782 #24762]  INFO -- default-ubuntu-1204: Step 16/17 : RUN chmod 0600 /home/kitchen/.ssh/authorized_keys
+I, [2018-06-28T10:01:38.024333 #24762]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:01:38.024580 #24762]  INFO -- default-ubuntu-1204:  ---> 313ee0564174
+I, [2018-06-28T10:01:38.024982 #24762]  INFO -- default-ubuntu-1204: Step 17/17 : RUN echo ssh-rsa\ AAAAB3NzaC1yc2EAAAADAQABAAABAQCZfp3s2gECgZugUNWM/PESudwqKrBCxtEBwWWD5nKfu\+43/MBYXCbeJkU9IqnVbLynRtMfodnZOHUztuRP9HoYLCIanZTb/Pljxe8YpPBeRfQWwwMHk6xd40EG5KFVx4TF8JWk8kao64EITZ4lRRh3HkalnEHBJxM/AAiS\+LoCKWpqxqufg/d\+Zcrre7Tjo3dDOZROwuGJrnYFD3uWqRMFxQLwlaSJuWOL2eZkUo/CzSrF3q6qnNkkSZcgelHnHZHlm2ivs4WASAgxWH2Y9TsXbDY3l8Gu1/E0GbmbqvofL7WzKfr2DGD2W8TDBsaeRlHvGWIsYJ5iqmOtQt\+9J9ch\ kitchen_docker_key >> /home/kitchen/.ssh/authorized_keys
+I, [2018-06-28T10:01:38.026047 #24762]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:01:38.026318 #24762]  INFO -- default-ubuntu-1204:  ---> ebc3974edaa2
+I, [2018-06-28T10:01:38.028027 #24762]  INFO -- default-ubuntu-1204: Successfully built ebc3974edaa2
+I, [2018-06-28T10:01:38.135746 #24762]  INFO -- default-ubuntu-1204: fb8a58a14466e645dc6d6620a30a4b866719417b2c38ed0f3f113ff1774be5ff
+I, [2018-06-28T10:01:38.493127 #24762]  INFO -- default-ubuntu-1204: 0.0.0.0:32774
+I, [2018-06-28T10:01:38.576113 #24762]  INFO -- default-ubuntu-1204: [SSH] Established
+I, [2018-06-28T10:01:38.577399 #24762]  INFO -- default-ubuntu-1204: Finished creating <default-ubuntu-1204> (0m0.96s).
+I, [2018-06-28T10:01:38.577579 #24762]  INFO -- default-ubuntu-1204: -----> Converging <default-ubuntu-1204>...
+I, [2018-06-28T10:01:38.578186 #24762]  INFO -- default-ubuntu-1204: Preparing files for transfer
+I, [2018-06-28T10:01:38.578353 #24762]  INFO -- default-ubuntu-1204: Preparing dna.json
+I, [2018-06-28T10:01:38.578645 #24762]  INFO -- default-ubuntu-1204: Resolving cookbook dependencies with Berkshelf 7.0.2...
+I, [2018-06-28T10:01:40.995829 #24762]  INFO -- default-ubuntu-1204: Removing non-cookbook files before transfer
+I, [2018-06-28T10:01:40.997131 #24762]  INFO -- default-ubuntu-1204: Preparing validation.pem
+I, [2018-06-28T10:01:40.997469 #24762]  INFO -- default-ubuntu-1204: Preparing client.rb
+I, [2018-06-28T10:01:41.081471 #24762]  INFO -- default-ubuntu-1204: -----> Installing Chef Omnibus (install only if missing)
+I, [2018-06-28T10:01:41.082278 #24762]  INFO -- default-ubuntu-1204: Downloading https://omnitruck.chef.io/install.sh to file /tmp/install.sh
+I, [2018-06-28T10:01:41.082719 #24762]  INFO -- default-ubuntu-1204: Trying wget...
+I, [2018-06-28T10:01:41.179490 #24762]  INFO -- default-ubuntu-1204: Download complete.
+I, [2018-06-28T10:01:41.191917 #24762]  INFO -- default-ubuntu-1204: ubuntu 12.04 x86_64
+I, [2018-06-28T10:01:41.192321 #24762]  INFO -- default-ubuntu-1204: Getting information for chef stable  for ubuntu...
+I, [2018-06-28T10:01:41.192695 #24762]  INFO -- default-ubuntu-1204: downloading https://omnitruck.chef.io/stable/chef/metadata?v=&p=ubuntu&pv=12.04&m=x86_64
+I, [2018-06-28T10:01:41.194850 #24762]  INFO -- default-ubuntu-1204:   to file /tmp/install.sh.15/metadata.txt
+I, [2018-06-28T10:01:41.195438 #24762]  INFO -- default-ubuntu-1204: trying wget...
+I, [2018-06-28T10:01:41.254060 #24762]  INFO -- default-ubuntu-1204: sha1	3eef728d8a096b6fce191216b51ba5fe4b064ea8
+I, [2018-06-28T10:01:41.254126 #24762]  INFO -- default-ubuntu-1204: sha256	df7201e5fb5113b8f68caa0cf4172dd7004282e947b449e0eeb094ea6e630227
+I, [2018-06-28T10:01:41.254147 #24762]  INFO -- default-ubuntu-1204: url	https://packages.chef.io/files/stable/chef/13.4.24/ubuntu/12.04/chef_13.4.24-1_amd64.deb
+I, [2018-06-28T10:01:41.254632 #24762]  INFO -- default-ubuntu-1204: version	13.4.24
+I, [2018-06-28T10:01:41.258187 #24762]  INFO -- default-ubuntu-1204: downloaded metadata file looks valid...
+I, [2018-06-28T10:01:41.266254 #24762]  INFO -- default-ubuntu-1204: downloading https://packages.chef.io/files/stable/chef/13.4.24/ubuntu/12.04/chef_13.4.24-1_amd64.deb
+I, [2018-06-28T10:01:41.266624 #24762]  INFO -- default-ubuntu-1204:   to file /tmp/install.sh.15/chef_13.4.24-1_amd64.deb
+I, [2018-06-28T10:01:41.267178 #24762]  INFO -- default-ubuntu-1204: trying wget...
+I, [2018-06-28T10:01:42.366259 #24762]  INFO -- default-ubuntu-1204: Comparing checksum with sha256sum...
+I, [2018-06-28T10:01:42.620738 #24762]  INFO -- default-ubuntu-1204: 
+I, [2018-06-28T10:01:42.621194 #24762]  INFO -- default-ubuntu-1204: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2018-06-28T10:01:42.621242 #24762]  INFO -- default-ubuntu-1204: 
+I, [2018-06-28T10:01:42.621266 #24762]  INFO -- default-ubuntu-1204: You are installing an omnibus package without a version pin.  If you are installing
+I, [2018-06-28T10:01:42.621285 #24762]  INFO -- default-ubuntu-1204: on production servers via an automated process this is DANGEROUS and you will
+I, [2018-06-28T10:01:42.621303 #24762]  INFO -- default-ubuntu-1204: be upgraded without warning on new releases, even to new major releases.
+I, [2018-06-28T10:01:42.621319 #24762]  INFO -- default-ubuntu-1204: Letting the version float is only appropriate in desktop, test, development or
+I, [2018-06-28T10:01:42.621334 #24762]  INFO -- default-ubuntu-1204: CI/CD environments.
+I, [2018-06-28T10:01:42.623678 #24762]  INFO -- default-ubuntu-1204: 
+I, [2018-06-28T10:01:42.623726 #24762]  INFO -- default-ubuntu-1204: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2018-06-28T10:01:42.623746 #24762]  INFO -- default-ubuntu-1204: 
+I, [2018-06-28T10:01:42.623762 #24762]  INFO -- default-ubuntu-1204: Installing chef 
+I, [2018-06-28T10:01:42.623778 #24762]  INFO -- default-ubuntu-1204: installing with dpkg...
+I, [2018-06-28T10:01:42.661146 #24762]  INFO -- default-ubuntu-1204: Selecting previously unselected package chef.
+I, [2018-06-28T10:01:42.676602 #24762]  INFO -- default-ubuntu-1204: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 9209 files and directories currently installed.)
+I, [2018-06-28T10:01:42.677219 #24762]  INFO -- default-ubuntu-1204: Unpacking chef (from .../chef_13.4.24-1_amd64.deb) ...
+I, [2018-06-28T10:01:47.404641 #24762]  INFO -- default-ubuntu-1204: Setting up chef (13.4.24-1) ...
+I, [2018-06-28T10:01:47.503391 #24762]  INFO -- default-ubuntu-1204: Thank you for installing Chef!
+I, [2018-06-28T10:01:47.595835 #24762]  INFO -- default-ubuntu-1204: Transferring files to <default-ubuntu-1204>
+I, [2018-06-28T10:01:48.958582 #24762]  INFO -- default-ubuntu-1204: Starting Chef Client, version 13.4.24
+I, [2018-06-28T10:01:49.732985 #24762]  INFO -- default-ubuntu-1204: Creating a new client identity for default-ubuntu-1204 using the validator key.
+I, [2018-06-28T10:01:49.940467 #24762]  INFO -- default-ubuntu-1204: resolving cookbooks for run list: ["my_cookbook::default"]
+I, [2018-06-28T10:01:49.960073 #24762]  INFO -- default-ubuntu-1204: Synchronizing Cookbooks:
+I, [2018-06-28T10:01:49.965759 #24762]  INFO -- default-ubuntu-1204:   - my_cookbook (0.1.0)
+I, [2018-06-28T10:01:49.967827 #24762]  INFO -- default-ubuntu-1204: Installing Cookbook Gems:
+I, [2018-06-28T10:01:49.969591 #24762]  INFO -- default-ubuntu-1204: Compiling Cookbooks...
+I, [2018-06-28T10:01:49.972684 #24762]  INFO -- default-ubuntu-1204: Converging 1 resources
+I, [2018-06-28T10:01:49.973451 #24762]  INFO -- default-ubuntu-1204: Recipe: my_cookbook::default
+I, [2018-06-28T10:01:56.182660 #24762]  INFO -- default-ubuntu-1204:   * apt_package[cowsay] action install
+I, [2018-06-28T10:01:56.183814 #24762]  INFO -- default-ubuntu-1204:     - install version 3.03+dfsg1-3 of package cowsay
+I, [2018-06-28T10:01:56.215287 #24762]  INFO -- default-ubuntu-1204: 
+I, [2018-06-28T10:01:56.217587 #24762]  INFO -- default-ubuntu-1204: Running handlers:
+I, [2018-06-28T10:01:56.218013 #24762]  INFO -- default-ubuntu-1204: Running handlers complete
+I, [2018-06-28T10:01:56.218772 #24762]  INFO -- default-ubuntu-1204: Chef Client finished, 1/1 resources updated in 07 seconds
+I, [2018-06-28T10:01:56.241265 #24762]  INFO -- default-ubuntu-1204: Downloading files from <default-ubuntu-1204>
+I, [2018-06-28T10:01:56.243914 #24762]  INFO -- default-ubuntu-1204: Finished converging <default-ubuntu-1204> (0m17.66s).
+I, [2018-06-28T10:01:56.244421 #24762]  INFO -- default-ubuntu-1204: -----> Setting up <default-ubuntu-1204>...
+I, [2018-06-28T10:01:56.245064 #24762]  INFO -- default-ubuntu-1204: Finished setting up <default-ubuntu-1204> (0m0.00s).
+I, [2018-06-28T10:01:56.245199 #24762]  INFO -- default-ubuntu-1204: -----> Verifying <default-ubuntu-1204>...
+I, [2018-06-28T10:01:56.536030 #24762]  INFO -- default-ubuntu-1204: Loaded tests from {:path=>".home.ec2-user.chef-repo.cookbooks.my_cookbook.test.integration.default"} 
+I, [2018-06-28T10:01:56.921125 #24762]  INFO -- default-ubuntu-1204: Finished verifying <default-ubuntu-1204> (0m0.67s).
